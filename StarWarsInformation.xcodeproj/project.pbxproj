@@ -13,6 +13,7 @@
 		35294DFC20996F7E00168295 /* StarWarsInformation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35294DFA20996F7E00168295 /* StarWarsInformation.xcdatamodeld */; };
 		35294DFE20996F8200168295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35294DFD20996F8200168295 /* Assets.xcassets */; };
 		35294E0120996F8200168295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35294DFF20996F8200168295 /* LaunchScreen.storyboard */; };
+		AC2824F99DFB86534FD7B64C /* Pods_StarWarsInformation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8BC3B059A05F0BA02921A3 /* Pods_StarWarsInformation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		35294DFD20996F8200168295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35294E0020996F8200168295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35294E0220996F8200168295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A8CB1AC87F8348429988E59 /* Pods-StarWarsInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsInformation.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsInformation/Pods-StarWarsInformation.release.xcconfig"; sourceTree = "<group>"; };
+		6A2C6781BDB80140C52D9C6C /* Pods-StarWarsInformation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsInformation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsInformation/Pods-StarWarsInformation.debug.xcconfig"; sourceTree = "<group>"; };
+		ED8BC3B059A05F0BA02921A3 /* Pods_StarWarsInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2824F99DFB86534FD7B64C /* Pods_StarWarsInformation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2637BD528C7CD03B9F062459 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A2C6781BDB80140C52D9C6C /* Pods-StarWarsInformation.debug.xcconfig */,
+				5A8CB1AC87F8348429988E59 /* Pods-StarWarsInformation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		35294DE720996F7E00168295 = {
 			isa = PBXGroup;
 			children = (
 				35294DF220996F7E00168295 /* StarWarsInformation */,
 				35294DF120996F7E00168295 /* Products */,
+				2637BD528C7CD03B9F062459 /* Pods */,
+				AF91EA189C0FDEBCF49EE04E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = StarWarsInformation;
 			sourceTree = "<group>";
 		};
+		AF91EA189C0FDEBCF49EE04E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED8BC3B059A05F0BA02921A3 /* Pods_StarWarsInformation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35294E0520996F8200168295 /* Build configuration list for PBXNativeTarget "StarWarsInformation" */;
 			buildPhases = (
+				A49B36FDF7FB0F0D9424D946 /* [CP] Check Pods Manifest.lock */,
 				35294DEC20996F7E00168295 /* Sources */,
 				35294DED20996F7E00168295 /* Frameworks */,
 				35294DEE20996F7E00168295 /* Resources */,
+				2DA51434585F2A7CD62D3BEF /* [CP] Embed Pods Frameworks */,
+				ED5235F25031AABB9DD67D73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DA51434585F2A7CD62D3BEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsInformation/Pods-StarWarsInformation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsInformation/Pods-StarWarsInformation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A49B36FDF7FB0F0D9424D946 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsInformation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED5235F25031AABB9DD67D73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsInformation/Pods-StarWarsInformation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35294DEC20996F7E00168295 /* Sources */ = {
@@ -282,15 +365,13 @@
 		};
 		35294E0620996F8200168295 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2C6781BDB80140C52D9C6C /* Pods-StarWarsInformation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7WTUYKQ3T8;
 				INFOPLIST_FILE = StarWarsInformation/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = personal.StarWarsInformation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -300,15 +381,13 @@
 		};
 		35294E0720996F8200168295 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A8CB1AC87F8348429988E59 /* Pods-StarWarsInformation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7WTUYKQ3T8;
 				INFOPLIST_FILE = StarWarsInformation/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = personal.StarWarsInformation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
