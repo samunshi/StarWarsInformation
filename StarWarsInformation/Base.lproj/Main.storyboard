@@ -22,16 +22,16 @@
                                 <rect key="frame" x="16" y="108" width="163" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pg-1-72-millennium-falcon-00.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-Ga-Dji">
+                                <rect key="frame" x="207" y="385" width="152" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lukeskywalker-1519252298974_1280w.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YBU-p1-TKc">
                                 <rect key="frame" x="16" y="385" width="163" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="r2d2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-pQ-7kK">
                                 <rect key="frame" x="207" y="108" width="152" height="202"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pg-1-72-millennium-falcon-00.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-Ga-Dji">
-                                <rect key="frame" x="207" y="385" width="152" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

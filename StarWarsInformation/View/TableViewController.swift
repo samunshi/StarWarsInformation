@@ -11,6 +11,14 @@ import UIKit
 
 public class TableViewController : UITableViewController {
     
+    let infoClient: InformationClient = InformationClient()
+    
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        // Make the request here
+        infoClient.getInitialScreenPopulationData(type: Variables.tableType)
+    }
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = Variables.tableType.rawValue
@@ -22,12 +30,17 @@ public class TableViewController : UITableViewController {
     }
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return number of table entries from GET request, for now return 1
         return 1
+        //return infoClient.getTableViewEntries()
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell() // again, temp implementation
+    }
+    
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Handle specific selections here...
+        // get the cell, get the name, make the request and perform the segue
     }
     
 }

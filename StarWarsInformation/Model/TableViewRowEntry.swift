@@ -12,21 +12,21 @@ public class TableViewRowEntry {
     
     var type: CellType
     var name: String
-    var uniqueId: Int
+    var uniqueInfoURL: String
     
     
-    public init(type: CellType, name: String, uniqueId: Int) {
+    public init(type: CellType, name: String, uniqueInfoURL: String) {
         self.type = type
         self.name = name
-        self.uniqueId = uniqueId
+        self.uniqueInfoURL = uniqueInfoURL
     }
     
     public func getName() -> String {
         return self.name
     }
     
-    public func getUniqueId() -> Int {
-        return self.uniqueId
+    public func getUniqueInfoURL() -> String {
+        return self.uniqueInfoURL
     }
 
     

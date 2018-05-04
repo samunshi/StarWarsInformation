@@ -49,7 +49,7 @@ class MainMenuViewController: UIViewController {
     @objc
     func handleVehicleButtonTapped() {
         // Need to make API request here so that table view has all the data it needs
-        cellTypeBeingPassed = CellType.vehicle
+        Variables.tableType = CellType.vehicle
         performSegue(withIdentifier: "tableViewSegue", sender: nil)
         print("Vehicle Button Tapped!")
     }
@@ -74,9 +74,11 @@ class MainMenuViewController: UIViewController {
     func handleCharacterButtonTapped() {
         
         Variables.tableType = CellType.character
-        performSegue(withIdentifier: "tableViewSegue", sender: CellType.character)
+        performSegue(withIdentifier: "tableViewSegue", sender: nil)
         print("Character Button Tapped!")
     }
+    
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {}
     
 }
 

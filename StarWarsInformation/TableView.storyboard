@@ -34,9 +34,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="H5B-EB-Ivm">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mkI-29-3GW"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="033-zv-NRi">
+                            <connections>
+                                <segue destination="na3-0q-VR8" kind="unwind" unwindAction="unwindToMainWithSegue:" id="fyd-n1-CI3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juX-ck-Rad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="na3-0q-VR8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2853.5999999999999" y="-447.52623688155927"/>
         </scene>
