@@ -16,6 +16,9 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var characterButton: UIImageView!
     @IBOutlet weak var vehicleButton: UIImageView!
     
+    // Local variables
+    var cellTypeBeingPassed: CellType!
+    
     // Controller layer
     let infoClient : InformationClient = InformationClient()
     
@@ -45,22 +48,33 @@ class MainMenuViewController: UIViewController {
     
     @objc
     func handleVehicleButtonTapped() {
+        // Need to make API request here so that table view has all the data it needs
+        cellTypeBeingPassed = CellType.vehicle
+        performSegue(withIdentifier: "tableViewSegue", sender: nil)
         print("Vehicle Button Tapped!")
     }
     
-    
     @objc
     func handlePlanetButtonTapped() {
+        
+        Variables.tableType = CellType.planet
+        performSegue(withIdentifier: "tableViewSegue", sender: nil)
         print("Planet Button Tapped!")
     }
     
     @objc
     func handleSpeciesButtonTapped() {
+        
+        Variables.tableType = CellType.species
+        performSegue(withIdentifier: "tableViewSegue", sender: nil)
         print("Species Button Tapped!")
     }
     
     @objc
     func handleCharacterButtonTapped() {
+        
+        Variables.tableType = CellType.character
+        performSegue(withIdentifier: "tableViewSegue", sender: CellType.character)
         print("Character Button Tapped!")
     }
     

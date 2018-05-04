@@ -14,6 +14,8 @@ import SwiftyJSON
 
 public class InformationClient {
     
+    var tableViewEntries: [TableViewRowEntry]!
+    
     // Get Request for initial screen population
     
     

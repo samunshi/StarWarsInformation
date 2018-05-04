@@ -26,7 +26,7 @@
                                 <rect key="frame" x="16" y="385" width="163" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HLHZ2.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-pQ-7kK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="r2d2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-pQ-7kK">
                                 <rect key="frame" x="207" y="108" width="152" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -44,11 +44,20 @@
                         <outlet property="planetButton" destination="Z9p-Ig-Uuw" id="QVZ-GO-s1k"/>
                         <outlet property="speciesButton" destination="tyC-pQ-7kK" id="elk-Y3-BCO"/>
                         <outlet property="vehicleButton" destination="vRs-Ga-Dji" id="DPh-dx-D3i"/>
+                        <segue destination="HTe-Qy-bgo" kind="presentation" identifier="tableViewSegue" id="bDV-l4-vpt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1084" y="777.66116941529242"/>
+        </scene>
+        <!--TableView-->
+        <scene sceneID="Zdh-2a-HNf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TableView" id="HTe-Qy-bgo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmJ-px-LM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826" y="758"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lDT-Ve-2JD">
@@ -70,9 +79,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HLHZ2.jpeg" width="572" height="572"/>
         <image name="Kiros-Kidnapped.png" width="725" height="725"/>
         <image name="lukeskywalker-1519252298974_1280w.jpg" width="1280" height="720"/>
         <image name="pg-1-72-millennium-falcon-00.jpg" width="740" height="740"/>
+        <image name="r2d2.jpg" width="3000" height="2200"/>
     </resources>
 </document>

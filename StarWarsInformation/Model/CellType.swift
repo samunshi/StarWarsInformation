@@ -8,9 +8,10 @@
 
 import Foundation
 
-public enum CellType {
-    case planet
-    case vehicle
-    case species
-    case character
+public enum CellType: String {
+    case planet = "Planets"
+    case vehicle = "Vehicles"
+    case species = "Species"
+    case character = "Characters"
+
 }
