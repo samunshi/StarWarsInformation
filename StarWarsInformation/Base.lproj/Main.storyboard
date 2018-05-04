@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8OC-a1-v9e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,12 +17,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kiros-Kidnapped.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z9p-Ig-Uuw">
+                                <rect key="frame" x="16" y="108" width="163" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lukeskywalker-1519252298974_1280w.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YBU-p1-TKc">
+                                <rect key="frame" x="16" y="385" width="163" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HLHZ2.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-pQ-7kK">
+                                <rect key="frame" x="207" y="108" width="152" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pg-1-72-millennium-falcon-00.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-Ga-Dji">
+                                <rect key="frame" x="207" y="385" width="152" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vB1-8E-gg8"/>
+                    <connections>
+                        <outlet property="characterButton" destination="YBU-p1-TKc" id="bZ1-WP-Mah"/>
+                        <outlet property="planetButton" destination="Z9p-Ig-Uuw" id="QVZ-GO-s1k"/>
+                        <outlet property="speciesButton" destination="tyC-pQ-7kK" id="elk-Y3-BCO"/>
+                        <outlet property="vehicleButton" destination="vRs-Ga-Dji" id="DPh-dx-D3i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1084" y="777.66116941529242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lDT-Ve-2JD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8OC-a1-v9e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9ba-O0-buT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B02-xp-SJ8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHw-Eu-OiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="777.66116941529242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HLHZ2.jpeg" width="572" height="572"/>
+        <image name="Kiros-Kidnapped.png" width="725" height="725"/>
+        <image name="lukeskywalker-1519252298974_1280w.jpg" width="1280" height="720"/>
+        <image name="pg-1-72-millennium-falcon-00.jpg" width="740" height="740"/>
+    </resources>
 </document>
