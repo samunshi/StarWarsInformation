@@ -11,12 +11,12 @@ import UIKit
 
 public class TableViewController : UITableViewController {
     
-    let infoClient: InformationClient = InformationClient()
+    let tableViewEntryGenerationClient: TableViewEntryGenerationClient = TableViewEntryGenerationClient()
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         // Make the request here
-        infoClient.getInitialScreenPopulationData(type: Variables.tableType)
+        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType)
     }
     
     override public func viewDidLoad() {
@@ -31,7 +31,7 @@ public class TableViewController : UITableViewController {
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
-        //return infoClient.getTableViewEntries()
+        //return tableViewEntryGenerationClient.getTableViewEntries()
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

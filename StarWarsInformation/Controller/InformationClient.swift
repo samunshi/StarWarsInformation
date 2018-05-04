@@ -14,10 +14,8 @@ import SwiftyJSON
 
 public class InformationClient {
     
-    var tableViewEntries: [TableViewRowEntry]!
-    
     // Get Request for initial screen population
-    public func getInitialScreenPopulationData(type: CellType) {
+    public func getInitialScreenPopulationData(type: CellType, completion: @escaping (JSON) -> Void) {
         let requestURL: String = generateInitialScreenPopulationURL(type: type)
         Alamofire.request(requestURL, method: .get).validate().responseJSON { response in
             switch response.result {
@@ -25,6 +23,7 @@ public class InformationClient {
             case .success(let value):
                 let json = JSON(value)
                 print(json)
+                completion(json)
              
             case .failure(let error):
                 print("GET request for initial screen population failed with error: \(error.localizedDescription)")
@@ -32,6 +31,24 @@ public class InformationClient {
         }
         
     }
+    
+    // Get request for subsequent page population
+    public func getSubsequentPageInformation(requestURL: String, completion: @escaping (JSON) -> Void) {
+        Alamofire.request(requestURL, method: .get).validate().responseJSON { response in
+            switch response.result {
+                
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+                completion(json)
+                
+            case .failure(let error):
+                print("GET request for subsequent screen population failed with error: \(error.localizedDescription)")
+                
+            }
+        }
+    }
+    
     
     // Get request for specific screen population
     public func getSpecificInformationAboutEntity(tableViewEntry: TableViewRowEntry) {
@@ -48,10 +65,6 @@ public class InformationClient {
                 
             }
         }
-    }
-    
-    public func getTableViewEntries() -> Int {
-        return tableViewEntries.count        
     }
     
     private func generateInitialScreenPopulationURL(type: CellType) -> String {

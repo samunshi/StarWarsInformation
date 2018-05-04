@@ -24,6 +24,7 @@ class MainMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Main Menu"
         initializeImageTouchEvents()
     }
     
