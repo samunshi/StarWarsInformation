@@ -8,25 +8,25 @@
 
 import Foundation
 
-public struct Species {
+public class Species: SingularInfoModel {
+    
     var name: String
     var averageHeight: String
     var classification: String
-    var homeworld: String
+//    var homeworld: String
     var language: String
-    var skinColour: String
-    var hairColour: String
+    var skinColours: [String]
+    var hairColours: [String]
     
-    public init(name: String, averageHeight: String, classification: String,
-                homeworld: String, language: String, skinColour: String,
-                hairColour: String) {
+    public init(name: String, averageHeight: String, classification: String, language: String, skinColours: [String],
+                hairColours: [String]) {
         self.name = name
         self.averageHeight = averageHeight
         self.classification = classification
-        self.homeworld = homeworld
+     //   self.homeworld = homeworld
         self.language = language
-        self.skinColour = skinColour
-        self.hairColour = hairColour
+        self.skinColours = skinColours
+        self.hairColours = hairColours
         
     }
 }

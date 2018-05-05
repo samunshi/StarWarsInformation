@@ -25,6 +25,7 @@
 		35020106209E03FA00CA539F /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35020105209E03FA00CA539F /* Planet.swift */; };
 		35020108209E043900CA539F /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35020107209E043900CA539F /* Vehicle.swift */; };
 		3502010A209E044000CA539F /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35020109209E044000CA539F /* Species.swift */; };
+		3502010C209E5A1300CA539F /* SingularInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502010B209E5A1300CA539F /* SingularInfoModel.swift */; };
 		35294DF420996F7E00168295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294DF320996F7E00168295 /* AppDelegate.swift */; };
 		35294DF620996F7E00168295 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294DF520996F7E00168295 /* MainMenuViewController.swift */; };
 		35294DF920996F7E00168295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35294DF720996F7E00168295 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		35020105209E03FA00CA539F /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		35020107209E043900CA539F /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		35020109209E044000CA539F /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		3502010B209E5A1300CA539F /* SingularInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingularInfoModel.swift; sourceTree = "<group>"; };
 		35294DF020996F7E00168295 /* StarWarsInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35294DF320996F7E00168295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35294DF520996F7E00168295 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				35020105209E03FA00CA539F /* Planet.swift */,
 				35020107209E043900CA539F /* Vehicle.swift */,
 				35020109209E044000CA539F /* Species.swift */,
+				3502010B209E5A1300CA539F /* SingularInfoModel.swift */,
 			);
 			path = "Type Specific Models";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				350200F2209C217900CA539F /* TableViewController.swift in Sources */,
 				350200F8209CC42E00CA539F /* TableViewEntryGenerationClient.swift in Sources */,
 				35020104209E03F300CA539F /* Character.swift in Sources */,
+				3502010C209E5A1300CA539F /* SingularInfoModel.swift in Sources */,
 				35020108209E043900CA539F /* Vehicle.swift in Sources */,
 				35294E122099747000168295 /* CellType.swift in Sources */,
 				35020106209E03FA00CA539F /* Planet.swift in Sources */,

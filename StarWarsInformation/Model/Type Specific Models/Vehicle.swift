@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Vehicle {
+public class Vehicle: SingularInfoModel {
     
     var name: String
     var type: String

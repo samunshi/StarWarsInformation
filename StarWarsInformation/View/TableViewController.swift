@@ -12,6 +12,7 @@ import UIKit
 public class TableViewController : UITableViewController {
     
     let tableViewEntryGenerationClient: TableViewEntryGenerationClient = TableViewEntryGenerationClient()
+    let specificEntryGenerationClient: SpecificEntryGenerationClient = SpecificEntryGenerationClient()
     
     let allRows: [TableViewRowEntry] = Variables.dataArray
     
@@ -31,7 +32,7 @@ public class TableViewController : UITableViewController {
     }
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Variables.dataArray.count
+        return allRows.count
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,9 +45,37 @@ public class TableViewController : UITableViewController {
     }
     
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Handle specific selections here...
         // get the cell, get the name, make the request and perform the segue
+        let selectedTableViewEntry = allRows[indexPath.row]
+        print("Selected entry: \(selectedTableViewEntry.getName())")
+        let url = selectedTableViewEntry.getUniqueInfoURL()
         
+        switch selectedTableViewEntry.type {
+        case CellType.character:
+            specificEntryGenerationClient.getCharacterEntryInformation(url: url) { (character) in
+                print ("Got parsed character and its name is \(character.name)")
+                Variables.character = character
+            }
+            break
+        case CellType.planet:
+            specificEntryGenerationClient.getPlanetEntryInformation(url: url) { (planet) in
+                print ("Got parsed planet and its name is \(planet.name)")
+                Variables.planet = planet
+            }
+            break
+        case CellType.species:
+            specificEntryGenerationClient.getSpeciesEntryInformation(url: url) { (species) in
+                print ("Got parsed species and its name is \(species.name)")
+                Variables.species = species
+            }
+            break
+        case CellType.vehicle:
+            specificEntryGenerationClient.getVehiclesEntryInformation(url: url) { (vehicle) in
+                print("Got parsed vehicle and its name is \(vehicle.name)")
+                Variables.vehicle = vehicle
+            }
+            break
+        }
     }
     
 }

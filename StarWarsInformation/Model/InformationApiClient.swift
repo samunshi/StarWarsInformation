@@ -51,14 +51,14 @@ public class InformationApiClient {
     
     
     // Get request for specific screen population
-    public func getSpecificInformationAboutEntity(tableViewEntry: TableViewRowEntry) {
-        let requestURL: String = tableViewEntry.getUniqueInfoURL()
+    public func getSpecificInformationAboutEntity(requestURL: String, completion: @escaping (JSON) -> Void) {
         Alamofire.request(requestURL, method: .get).validate().responseJSON { response in
             switch response.result {
                 
             case .success(let value):
                 let json = JSON(value)
                 print(json)
+                completion(json)
                 
             case .failure(let error):
                 print("GET request for specific screen population failed with error: \(error.localizedDescription)")

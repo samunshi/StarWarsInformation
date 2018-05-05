@@ -8,24 +8,23 @@
 
 import Foundation
 
-public struct Character {
+public class Character: SingularInfoModel {
     
     var name: String
     var birthYear: String
     var hairColour: String
     var gender: String
     var height: String
-    var appearsIn: [String]
+//    var appearsIn: [String]
     
     public init (name: String, birthYear: String, hairColour:
-                String, gender: String, height: String, appearsIn: [String]) {
+                String, gender: String, height: String) { // }, appearsIn: [String]) {
         self.name = name
         self.birthYear = birthYear
         self.hairColour = hairColour
         self.gender = gender
         self.height = height
-        self.appearsIn = appearsIn
-        
+//        self.appearsIn = appearsIn
     }
     
 }

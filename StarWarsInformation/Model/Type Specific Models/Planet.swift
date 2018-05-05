@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Planet {
+public class Planet: SingularInfoModel {
     
     var name: String
     var climate: String

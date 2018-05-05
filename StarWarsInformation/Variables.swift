@@ -12,4 +12,10 @@ struct Variables {
     static var tableType: CellType!
     static var dataArray = [TableViewRowEntry]()
     
+    // Current individual info models
+    static var character: Character
+    static var species: Species
+    static var planet: Planet
+    static var vehicle: Vehicle
+    
 }

@@ -74,16 +74,4 @@ public class TableViewEntryGenerationClient {
             self.group.leave()
         }
     }
-    
-    public func getTableViewEntries() -> [TableViewRowEntry] {
-        return self.tableViewEntries
-    }
-    
-    public func getTableViewEntriesCount() -> Int {
-        return tableViewEntries.count
-    }
-    
-    public func getParticularTableViewEntry(index: Int) -> TableViewRowEntry {
-        return tableViewEntries[index]
-    }
 }
