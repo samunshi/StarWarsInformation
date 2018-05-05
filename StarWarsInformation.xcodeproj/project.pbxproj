@@ -18,6 +18,7 @@
 		350200F2209C217900CA539F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350200F1209C217900CA539F /* TableViewController.swift */; };
 		350200F6209C2F9500CA539F /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350200F5209C2F9500CA539F /* Variables.swift */; };
 		350200F8209CC42E00CA539F /* TableViewEntryGenerationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350200F7209CC42E00CA539F /* TableViewEntryGenerationClient.swift */; };
+		350200FB209D35AA00CA539F /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350200FA209D35AA00CA539F /* InformationTableViewCell.swift */; };
 		35294DF420996F7E00168295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294DF320996F7E00168295 /* AppDelegate.swift */; };
 		35294DF620996F7E00168295 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294DF520996F7E00168295 /* MainMenuViewController.swift */; };
 		35294DF920996F7E00168295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35294DF720996F7E00168295 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		350200F1209C217900CA539F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		350200F5209C2F9500CA539F /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		350200F7209CC42E00CA539F /* TableViewEntryGenerationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewEntryGenerationClient.swift; sourceTree = "<group>"; };
+		350200FA209D35AA00CA539F /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		35294DF020996F7E00168295 /* StarWarsInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35294DF320996F7E00168295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35294DF520996F7E00168295 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		350200F9209D357800CA539F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				350200FA209D35AA00CA539F /* InformationTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		35294DE720996F7E00168295 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		35294E092099736300168295 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				350200F9209D357800CA539F /* Cells */,
 				35294DF520996F7E00168295 /* MainMenuViewController.swift */,
 				350200F1209C217900CA539F /* TableViewController.swift */,
 			);
@@ -317,6 +328,7 @@
 				350200F8209CC42E00CA539F /* TableViewEntryGenerationClient.swift in Sources */,
 				35294E122099747000168295 /* CellType.swift in Sources */,
 				350200F6209C2F9500CA539F /* Variables.swift in Sources */,
+				350200FB209D35AA00CA539F /* InformationTableViewCell.swift in Sources */,
 				35294DF420996F7E00168295 /* AppDelegate.swift in Sources */,
 				35294E102099745000168295 /* TableViewRowEntry.swift in Sources */,
 				35294DFC20996F7E00168295 /* StarWarsInformation.xcdatamodeld in Sources */,

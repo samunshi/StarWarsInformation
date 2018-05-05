@@ -14,7 +14,6 @@ public class TableViewRowEntry {
     var name: String
     var uniqueInfoURL: String
     
-    
     public init(type: CellType, name: String, uniqueInfoURL: String) {
         self.type = type
         self.name = name

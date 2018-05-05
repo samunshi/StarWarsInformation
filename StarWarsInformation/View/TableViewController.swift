@@ -15,13 +15,13 @@ public class TableViewController : UITableViewController {
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        // Make the request here
-        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType)
     }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = Variables.tableType.rawValue
+        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType)
+        
     }
     
     // Table View delegate methods
@@ -30,12 +30,26 @@ public class TableViewController : UITableViewController {
     }
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-        //return tableViewEntryGenerationClient.getTableViewEntries()
+        // return tableViewEntryGenerationClient.getTableViewEntriesCount()
+        return 10
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell() // again, temp implementation
+//        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) {
+//            print ("Data in array is: \(tableViewEntryGenerationClient.getTableViewEntriesCount())")
+//          //  tableView.reloadData()
+//
+//        }
+        let allRows: [TableViewRowEntry] = tableViewEntryGenerationClient.getTableViewEntries()
+        for row in allRows {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformationTableViewCell", for: indexPath) as? InformationTableViewCell else {
+                fatalError("Cell isn't the right type")
+            }
+            cell.textLabel?.text = row.getName()
+            cell.customURL = row.getUniqueInfoURL()
+            return cell
+        }
+        return UITableViewCell() // should not reach this point
     }
     
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
