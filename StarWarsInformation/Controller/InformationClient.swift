@@ -14,8 +14,6 @@ import SwiftyJSON
 
 public class InformationClient {
     
-    var tableViewEntries: [TableViewRowEntry] = Array()
-
     // Get Request for initial screen population
     public func getInitialScreenPopulationData(type: CellType, completion: @escaping (JSON) -> Void) {
         let requestURL: String = generateInitialScreenPopulationURL(type: type)
@@ -24,7 +22,7 @@ public class InformationClient {
                 
             case .success(let value):
                 let json = JSON(value)
-                print(json)
+              //  print(json)
                 completion(json)
              
             case .failure(let error):
@@ -41,7 +39,7 @@ public class InformationClient {
                 
             case .success(let value):
                 let json = JSON(value)
-                print(json)
+            //    print(json)
                 completion(json)
                 
             case .failure(let error):

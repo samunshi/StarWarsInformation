@@ -15,13 +15,13 @@ public class TableViewEntryGenerationClient {
     var nextURL: String!
     
     let infoClient: InformationClient = InformationClient()
+    let group = DispatchGroup()
     
-    public func generateTableViewEntries(type: CellType) {
+    public func generateTableViewEntries(type: CellType, completion: @escaping ([TableViewRowEntry]) -> Void) {
+        // Reset the array incase of a previous request
+        tableViewEntries.removeAll()
         // make initial request
-        initialRequestHandler(type: type)
-    }
-    
-    private func initialRequestHandler(type: CellType) {
+        group.enter()
         infoClient.getInitialScreenPopulationData(type: type) { json in
             self.nextURL = json["next"].stringValue
             // Do parsing here
@@ -33,12 +33,20 @@ public class TableViewEntryGenerationClient {
                 }
             }
             print ("Table view entry array size is \(self.tableViewEntries.count)")
-            print("Next URL is: \(self.nextURL)")
+         //   print("Next URL is: \(self.nextURL)")
             self.subsequentRequestHandler(type: type)
+            self.group.leave()
         }
+        group.notify(queue: .main) {
+            print ("both requests done")
+            print ("The count in the array after both request are done is \(self.tableViewEntries.count)")
+            completion(self.tableViewEntries)
+        }
+        // print ("The size of the Variables constant is \(Variables.dataArray)")
     }
-    
+
     private func subsequentRequestHandler(type: CellType) {
+        group.enter()
         infoClient.getSubsequentPageInformation(requestURL: nextURL) { json in
             if let nextURL = json["next"].string {
                 self.nextURL = nextURL
@@ -51,7 +59,7 @@ public class TableViewEntryGenerationClient {
                     }
                 }
                 print ("Table view entry array size is \(self.tableViewEntries.count)")
-                print("Next URL is: \(self.nextURL)")
+              //  print("Next URL is: \(self.nextURL)")
                 self.subsequentRequestHandler(type: type)
             } else {
                 self.nextURL = nil
@@ -63,9 +71,9 @@ public class TableViewEntryGenerationClient {
                     }
                 }
                 print ("Table view entry array size is \(self.tableViewEntries.count)")
-                print("Next URL is: \(self.nextURL)")
-                return
+              //  print("Next URL is: \(self.nextURL)")
             }
+            self.group.leave()
         }
         print ("Within the subsequent request handler method, the array count is: \(tableViewEntries.count)")
     }

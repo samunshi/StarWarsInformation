@@ -20,8 +20,7 @@ public class TableViewController : UITableViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = Variables.tableType.rawValue
-        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType)
-        
+        print("Accessing variables array size: \(Variables.dataArray.count)")
     }
     
     // Table View delegate methods
@@ -30,26 +29,18 @@ public class TableViewController : UITableViewController {
     }
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return tableViewEntryGenerationClient.getTableViewEntriesCount()
-        return 10
+        return Variables.dataArray.count
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) {
-//            print ("Data in array is: \(tableViewEntryGenerationClient.getTableViewEntriesCount())")
-//          //  tableView.reloadData()
-//
-//        }
-        let allRows: [TableViewRowEntry] = tableViewEntryGenerationClient.getTableViewEntries()
-        for row in allRows {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformationTableViewCell", for: indexPath) as? InformationTableViewCell else {
-                fatalError("Cell isn't the right type")
-            }
-            cell.textLabel?.text = row.getName()
-            cell.customURL = row.getUniqueInfoURL()
-            return cell
+
+        let allRows: [TableViewRowEntry] = Variables.dataArray
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformationTableViewCell", for: indexPath) as? InformationTableViewCell else {
+            fatalError("Cell isn't the right type")
         }
-        return UITableViewCell() // should not reach this point
+        cell.textLabel?.text = allRows[indexPath.row].getName()
+        cell.customURL = allRows[indexPath.row].getUniqueInfoURL()
+        return cell
     }
     
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

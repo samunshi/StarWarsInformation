@@ -10,5 +10,6 @@ import Foundation
 
 struct Variables {
     static var tableType: CellType!
+    static var dataArray = [TableViewRowEntry]()
     
 }
