@@ -20,7 +20,6 @@ class MainMenuViewController: UIViewController {
     var cellTypeBeingPassed: CellType!
     
     // Controller layer
-    let infoClient : InformationClient = InformationClient()
     let tableViewEntryGenerationClient : TableViewEntryGenerationClient = TableViewEntryGenerationClient()
     
     override func viewDidLoad() {
@@ -52,45 +51,31 @@ class MainMenuViewController: UIViewController {
     func handleVehicleButtonTapped() {
         // Need to make API request here so that table view has all the data it needs
         Variables.tableType = CellType.vehicle
-        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) { (dataArray) in
-            print("Vehicle Button Tapped!")
-            print ("MMVC: \(dataArray.count)")
-            Variables.dataArray = dataArray
-            self.performSegue(withIdentifier: "tableViewSegue", sender: nil)
-        }
+        performInformationRequest()
     }
     
     @objc
     func handlePlanetButtonTapped() {
-        
         Variables.tableType = CellType.planet
-        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) { (dataArray) in
-            print("Planet Button Tapped!")
-            print ("MMVC: \(dataArray.count)")
-            Variables.dataArray = dataArray
-            self.performSegue(withIdentifier: "tableViewSegue", sender: nil)
-        }
+        performInformationRequest()
         
     }
     
     @objc
     func handleSpeciesButtonTapped() {
-        
         Variables.tableType = CellType.species
-        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) { (dataArray) in
-            print("Species Button Tapped!")
-            print ("MMVC: \(dataArray.count)")
-            Variables.dataArray = dataArray
-            self.performSegue(withIdentifier: "tableViewSegue", sender: nil)
-        }
+        performInformationRequest()
     }
     
     @objc
     func handleCharacterButtonTapped() {
-        
         Variables.tableType = CellType.character
+        performInformationRequest()
+    }
+    
+    func performInformationRequest() {
         tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) { (dataArray) in
-            print("Character Button Tapped!")
+            print("\(Variables.tableType.rawValue) button tapped!")
             print ("MMVC: \(dataArray.count)")
             Variables.dataArray = dataArray
             self.performSegue(withIdentifier: "tableViewSegue", sender: nil)

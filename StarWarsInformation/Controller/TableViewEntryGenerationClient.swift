@@ -14,7 +14,7 @@ public class TableViewEntryGenerationClient {
     var tableViewEntries: [TableViewRowEntry] = Array()
     var nextURL: String!
     
-    let infoClient: InformationClient = InformationClient()
+    let infoClient: InformationApiClient = InformationApiClient()
     let group = DispatchGroup()
     
     public func generateTableViewEntries(type: CellType, completion: @escaping ([TableViewRowEntry]) -> Void) {
@@ -33,16 +33,14 @@ public class TableViewEntryGenerationClient {
                 }
             }
             print ("Table view entry array size is \(self.tableViewEntries.count)")
-         //   print("Next URL is: \(self.nextURL)")
+            print("Next URL is: \(self.nextURL)")
             self.subsequentRequestHandler(type: type)
             self.group.leave()
         }
         group.notify(queue: .main) {
-            print ("both requests done")
-            print ("The count in the array after both request are done is \(self.tableViewEntries.count)")
+            print ("All requests done")
             completion(self.tableViewEntries)
         }
-        // print ("The size of the Variables constant is \(Variables.dataArray)")
     }
 
     private func subsequentRequestHandler(type: CellType) {
@@ -59,7 +57,7 @@ public class TableViewEntryGenerationClient {
                     }
                 }
                 print ("Table view entry array size is \(self.tableViewEntries.count)")
-              //  print("Next URL is: \(self.nextURL)")
+                print("Next URL is: \(self.nextURL)")
                 self.subsequentRequestHandler(type: type)
             } else {
                 self.nextURL = nil
@@ -71,11 +69,10 @@ public class TableViewEntryGenerationClient {
                     }
                 }
                 print ("Table view entry array size is \(self.tableViewEntries.count)")
-              //  print("Next URL is: \(self.nextURL)")
+                print("Next URL is: \(self.nextURL)")
             }
             self.group.leave()
         }
-        print ("Within the subsequent request handler method, the array count is: \(tableViewEntries.count)")
     }
     
     public func getTableViewEntries() -> [TableViewRowEntry] {
@@ -89,5 +86,4 @@ public class TableViewEntryGenerationClient {
     public func getParticularTableViewEntry(index: Int) -> TableViewRowEntry {
         return tableViewEntries[index]
     }
-    
 }

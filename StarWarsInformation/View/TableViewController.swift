@@ -13,6 +13,8 @@ public class TableViewController : UITableViewController {
     
     let tableViewEntryGenerationClient: TableViewEntryGenerationClient = TableViewEntryGenerationClient()
     
+    let allRows: [TableViewRowEntry] = Variables.dataArray
+    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -33,8 +35,6 @@ public class TableViewController : UITableViewController {
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let allRows: [TableViewRowEntry] = Variables.dataArray
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformationTableViewCell", for: indexPath) as? InformationTableViewCell else {
             fatalError("Cell isn't the right type")
         }
@@ -46,6 +46,7 @@ public class TableViewController : UITableViewController {
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Handle specific selections here...
         // get the cell, get the name, make the request and perform the segue
+        
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  InformationClient.swift
+//  InformationApiClient.swift
 //  StarWarsInformation
 //
 //  Handles the API calls to gather all the required information to populate app screens
@@ -12,7 +12,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-public class InformationClient {
+public class InformationApiClient {
     
     // Get Request for initial screen population
     public func getInitialScreenPopulationData(type: CellType, completion: @escaping (JSON) -> Void) {
