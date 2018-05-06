@@ -139,11 +139,13 @@ public class SpecificEntryGenerationClient {
         let classification = json["classification"].stringValue
         // let homeworld = json["homeworld"].stringValue
         let language = json["language"].stringValue
-        guard let skinColours = json["skin_colors"].arrayObject as? [String] else {
-            fatalError("Could not read skin colour String array!")
+        var skinColours = [String]()
+        if let sc = json["skin_colors"].arrayObject as? [String] {
+            skinColours = sc
         }
-        guard let hairColours = json["hair_colors"].arrayObject as? [String] else {
-            fatalError("Could not read hair colour String array!")
+        var hairColours = [String]()
+        if let hc = json["hair_colors"].arrayObject as? [String] {
+            hairColours = hc
         }
         
         return Species(name: name, averageHeight: averageHeight, classification: classification,

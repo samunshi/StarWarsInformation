@@ -16,6 +16,8 @@ public class TableViewController : UITableViewController {
     
     let allRows: [TableViewRowEntry] = Variables.dataArray
     
+    @IBAction func unwindToTableView(segue: UIStoryboardSegue) {}
+    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -55,24 +57,30 @@ public class TableViewController : UITableViewController {
             specificEntryGenerationClient.getCharacterEntryInformation(url: url) { (character) in
                 print ("Got parsed character and its name is \(character.name)")
                 Variables.character = character
+                self.performSegue(withIdentifier: "showInfoView", sender: nil)
             }
             break
         case CellType.planet:
             specificEntryGenerationClient.getPlanetEntryInformation(url: url) { (planet) in
                 print ("Got parsed planet and its name is \(planet.name)")
                 Variables.planet = planet
+                self.performSegue(withIdentifier: "showInfoView", sender: nil)
+
             }
             break
         case CellType.species:
             specificEntryGenerationClient.getSpeciesEntryInformation(url: url) { (species) in
                 print ("Got parsed species and its name is \(species.name)")
                 Variables.species = species
+                self.performSegue(withIdentifier: "showInfoView", sender: nil)
+
             }
             break
         case CellType.vehicle:
             specificEntryGenerationClient.getVehiclesEntryInformation(url: url) { (vehicle) in
                 print("Got parsed vehicle and its name is \(vehicle.name)")
                 Variables.vehicle = vehicle
+                self.performSegue(withIdentifier: "showInfoView", sender: nil)
             }
             break
         }

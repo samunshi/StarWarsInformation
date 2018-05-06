@@ -52,11 +52,22 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="59I-59-0wo" kind="show" identifier="showInfoView" id="Ug1-BO-X6X"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juX-ck-Rad" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="na3-0q-VR8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2853.5999999999999" y="-447.52623688155927"/>
+        </scene>
+        <!--InformationView-->
+        <scene sceneID="6VX-xg-fv3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InformationView" id="59I-59-0wo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P5E-Ar-NdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3521" y="-448"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TqX-MD-W97">
