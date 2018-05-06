@@ -15,15 +15,17 @@ public class Character: SingularInfoModel {
     var hairColour: String
     var gender: String
     var height: String
+    var eyeColour: String
 //    var appearsIn: [String]
     
     public init (name: String, birthYear: String, hairColour:
-                String, gender: String, height: String) { // }, appearsIn: [String]) {
+        String, gender: String, height: String, eyeColour: String) { // }, appearsIn: [String]) {
         self.name = name
         self.birthYear = birthYear
         self.hairColour = hairColour
         self.gender = gender
         self.height = height
+        self.eyeColour = eyeColour
 //        self.appearsIn = appearsIn
     }
     

@@ -114,8 +114,9 @@ public class SpecificEntryGenerationClient {
         let hairColour = json["hair_colour"].stringValue
         let gender = json["gender"].stringValue
         let height = json["height"].stringValue
+        let eyeColour = json["eye_colour"].stringValue
         
-        return Character(name: name, birthYear: birthYear, hairColour: hairColour, gender: gender, height: height)
+        return Character(name: name, birthYear: birthYear, hairColour: hairColour, gender: gender, height: height, eyeColour: eyeColour)
         
     }
     
