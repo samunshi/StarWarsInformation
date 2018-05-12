@@ -111,10 +111,10 @@ public class SpecificEntryGenerationClient {
     private func generateCharacterModel(json: JSON) -> Character {
         let name = json["name"].stringValue
         let birthYear = json["birth_year"].stringValue
-        let hairColour = json["hair_colour"].stringValue
+        let hairColour = json["hair_color"].stringValue
         let gender = json["gender"].stringValue
         let height = json["height"].stringValue
-        let eyeColour = json["eye_colour"].stringValue
+        let eyeColour = json["eye_color"].stringValue
         
         return Character(name: name, birthYear: birthYear, hairColour: hairColour, gender: gender, height: height, eyeColour: eyeColour)
         

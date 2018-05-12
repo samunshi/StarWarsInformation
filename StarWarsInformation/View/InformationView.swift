@@ -13,9 +13,17 @@ public class InformationView {
     
     public func generateCharacterText() -> String {
         let character: Character = Variables.character
-        let genderTextCapital: String = character.gender == "Male" ? "Him" : "Her"
-        let genderText: String = character.gender == "Male" ? "him" : "her"
+        let genderTextCapital: String
+        let genderText: String
 
+        if (character.gender == "male") {
+            genderTextCapital = "His"
+            genderText = "his"
+        } else {
+            genderTextCapital = "Her"
+            genderText = "her"
+        }
+    
         let text: String = "\(character.name) was born in the year \(character.birthYear). \(genderTextCapital) hair colour is \(character.hairColour) and \(genderText) eye colour is \(character.eyeColour)."
         
         return text

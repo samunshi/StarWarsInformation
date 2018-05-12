@@ -38,6 +38,7 @@ class MainMenuViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         activityIndicator.stopAnimating()
         showAllButtons()
+        self.view.isUserInteractionEnabled = true
     }
     
     func initializeImageTouchEvents() {
@@ -61,8 +62,9 @@ class MainMenuViewController: UIViewController {
     
     @objc
     func handleVehicleButtonTapped() {
-        vehicleButton.isOpaque = true
+        vehicleButton.isHidden = true
         vehicleIndicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
         
         Variables.tableType = CellType.vehicle
         performInformationRequest()
@@ -72,6 +74,7 @@ class MainMenuViewController: UIViewController {
     func handlePlanetButtonTapped() {
         planetButton.isHidden = true
         activityIndicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
         
         Variables.tableType = CellType.planet
         performInformationRequest()
@@ -80,8 +83,9 @@ class MainMenuViewController: UIViewController {
     
     @objc
     func handleSpeciesButtonTapped() {
-        speciesButton.isOpaque = true
+        speciesButton.isHidden = true
         speciesIndicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
         
         Variables.tableType = CellType.species
         performInformationRequest()
@@ -89,8 +93,9 @@ class MainMenuViewController: UIViewController {
     
     @objc
     func handleCharacterButtonTapped() {
-        characterButton.isOpaque = true
+        characterButton.isHidden = true
         characterIndicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
     
         Variables.tableType = CellType.character
         performInformationRequest()
