@@ -16,6 +16,12 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var characterButton: UIImageView!
     @IBOutlet weak var vehicleButton: UIImageView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var speciesIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var characterIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var vehicleIndicator: UIActivityIndicatorView!
+    
+    
     // Local variables
     var cellTypeBeingPassed: CellType!
     
@@ -25,7 +31,13 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Main Menu"
+        
         initializeImageTouchEvents()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        activityIndicator.stopAnimating()
+        showAllButtons()
     }
     
     func initializeImageTouchEvents() {
@@ -49,13 +61,18 @@ class MainMenuViewController: UIViewController {
     
     @objc
     func handleVehicleButtonTapped() {
-        // Need to make API request here so that table view has all the data it needs
+        vehicleButton.isOpaque = true
+        vehicleIndicator.startAnimating()
+        
         Variables.tableType = CellType.vehicle
         performInformationRequest()
     }
     
     @objc
     func handlePlanetButtonTapped() {
+        planetButton.isHidden = true
+        activityIndicator.startAnimating()
+        
         Variables.tableType = CellType.planet
         performInformationRequest()
         
@@ -63,12 +80,18 @@ class MainMenuViewController: UIViewController {
     
     @objc
     func handleSpeciesButtonTapped() {
+        speciesButton.isOpaque = true
+        speciesIndicator.startAnimating()
+        
         Variables.tableType = CellType.species
         performInformationRequest()
     }
     
     @objc
     func handleCharacterButtonTapped() {
+        characterButton.isOpaque = true
+        characterIndicator.startAnimating()
+    
         Variables.tableType = CellType.character
         performInformationRequest()
     }
@@ -80,6 +103,13 @@ class MainMenuViewController: UIViewController {
             Variables.dataArray = dataArray
             self.performSegue(withIdentifier: "tableViewSegue", sender: nil)
         }
+    }
+    
+    func showAllButtons() {
+        planetButton.isHidden = false
+        speciesButton.isHidden = false
+        characterButton.isHidden = false
+        vehicleButton.isHidden = false
     }
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {}

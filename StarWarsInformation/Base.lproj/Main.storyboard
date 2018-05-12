@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8OC-a1-v9e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Starjedi.ttf">
+            <string>StarJedi</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,60 +23,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kiros-Kidnapped.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z9p-Ig-Uuw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launch_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-rL-WZa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sff-ct-F5x">
+                                <rect key="frame" x="87" y="199" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="BCV-Xy-rDg">
+                                <rect key="frame" x="275" y="199" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="vMl-2q-1e7">
+                                <rect key="frame" x="87" y="471" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Qs1-27-wQO">
+                                <rect key="frame" x="275" y="471" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ord_Mantell_TOR_new.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z9p-Ig-Uuw">
                                 <rect key="frame" x="16" y="108" width="163" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pg-1-72-millennium-falcon-00.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-Ga-Dji">
-                                <rect key="frame" x="207" y="385" width="152" height="192"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Millennium_Falcon_DICE.png" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-Ga-Dji">
+                                <rect key="frame" x="197" y="415" width="152" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lukeskywalker-1519252298974_1280w.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YBU-p1-TKc">
-                                <rect key="frame" x="16" y="385" width="163" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="r2d2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-pQ-7kK">
-                                <rect key="frame" x="207" y="108" width="152" height="202"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png" translatesAutoresizingMaskIntoConstraints="NO" id="YBU-p1-TKc">
+                                <rect key="frame" x="38" y="362" width="130" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0e-8r-Qbb">
-                                <rect key="frame" x="76" y="323" width="57" height="21"/>
+                                <rect key="frame" x="57" y="323" width="80" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.94183163920000001" blue="0.1875376168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsM-xw-sjD">
-                                <rect key="frame" x="55" y="594" width="85" height="21"/>
+                                <rect key="frame" x="38" y="590" width="119" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.94183163920000001" blue="0.1875376168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Species" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0h-Pm-ion">
-                                <rect key="frame" x="253" y="323" width="61" height="21"/>
+                                <rect key="frame" x="248" y="323" width="71" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.94183163920000001" blue="0.1875376168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuH-ct-Nd2">
-                                <rect key="frame" x="253" y="594" width="64" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vehicles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuH-ct-Nd2">
+                                <rect key="frame" x="242" y="590" width="85" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.94183163920000001" blue="0.1875376168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-9Y-SQl">
+                                <rect key="frame" x="90" y="20" width="194" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.94183163923342439" blue="0.18753761682668957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chewbacca-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-pQ-7kK">
+                                <rect key="frame" x="208" y="125" width="155" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vB1-8E-gg8"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="sff-ct-F5x" id="cZj-FK-ofz"/>
                         <outlet property="characterButton" destination="YBU-p1-TKc" id="bZ1-WP-Mah"/>
+                        <outlet property="characterIndicator" destination="vMl-2q-1e7" id="cQn-6F-2QK"/>
                         <outlet property="planetButton" destination="Z9p-Ig-Uuw" id="QVZ-GO-s1k"/>
                         <outlet property="speciesButton" destination="tyC-pQ-7kK" id="elk-Y3-BCO"/>
+                        <outlet property="speciesIndicator" destination="BCV-Xy-rDg" id="zSf-7x-7zf"/>
                         <outlet property="vehicleButton" destination="vRs-Ga-Dji" id="DPh-dx-D3i"/>
+                        <outlet property="vehicleIndicator" destination="Qs1-27-wQO" id="Kqg-ez-meH"/>
                         <segue destination="HTe-Qy-bgo" kind="presentation" identifier="tableViewSegue" id="bDV-l4-vpt"/>
                     </connections>
                 </viewController>
@@ -87,29 +123,12 @@
             </objects>
             <point key="canvasLocation" x="1826" y="758"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lDT-Ve-2JD">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8OC-a1-v9e" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9ba-O0-buT">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B02-xp-SJ8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KHw-Eu-OiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="21.600000000000001" y="777.66116941529242"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Kiros-Kidnapped.png" width="725" height="725"/>
-        <image name="lukeskywalker-1519252298974_1280w.jpg" width="1280" height="720"/>
-        <image name="pg-1-72-millennium-falcon-00.jpg" width="740" height="740"/>
-        <image name="r2d2.jpg" width="3000" height="2200"/>
+        <image name="Chewbacca-1.png" width="940" height="700"/>
+        <image name="Millennium_Falcon_DICE.png" width="639" height="262"/>
+        <image name="Ord_Mantell_TOR_new.png" width="476" height="479"/>
+        <image name="launch_background.jpg" width="236" height="466"/>
+        <image name="the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png" width="355" height="720"/>
     </resources>
 </document>

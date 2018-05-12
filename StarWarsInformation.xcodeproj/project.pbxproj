@@ -10,10 +10,6 @@
 		350200DA209C0FF900CA539F /* Star_Wars_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 350200D8209C0FF900CA539F /* Star_Wars_logo.png */; };
 		350200DB209C0FF900CA539F /* launch_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 350200D9209C0FF900CA539F /* launch_background.jpg */; };
 		350200DD209C113900CA539F /* info_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 350200DC209C113900CA539F /* info_icon.png */; };
-		350200E6209C198200CA539F /* Kiros-Kidnapped.png in Resources */ = {isa = PBXBuildFile; fileRef = 350200E5209C198200CA539F /* Kiros-Kidnapped.png */; };
-		350200EA209C1B3D00CA539F /* lukeskywalker-1519252298974_1280w.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 350200E9209C1B3D00CA539F /* lukeskywalker-1519252298974_1280w.jpg */; };
-		350200EC209C1B7B00CA539F /* pg-1-72-millennium-falcon-00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 350200EB209C1B7A00CA539F /* pg-1-72-millennium-falcon-00.jpg */; };
-		350200EE209C204500CA539F /* r2d2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 350200ED209C204500CA539F /* r2d2.jpg */; };
 		350200F0209C20E100CA539F /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350200EF209C20E100CA539F /* TableView.storyboard */; };
 		350200F2209C217900CA539F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350200F1209C217900CA539F /* TableViewController.swift */; };
 		350200F6209C2F9500CA539F /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350200F5209C2F9500CA539F /* Variables.swift */; };
@@ -37,6 +33,13 @@
 		35294E0E209973E600168295 /* InformationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0D209973E600168295 /* InformationApiClient.swift */; };
 		35294E102099745000168295 /* TableViewRowEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0F2099745000168295 /* TableViewRowEntry.swift */; };
 		35294E122099747000168295 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E112099747000168295 /* CellType.swift */; };
+		35E932B220A75E5A0057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B120A75E590057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg */; };
+		35E932B620A77FA30057239A /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B520A77F930057239A /* Starjedi.ttf */; };
+		35E932B720A77FA60057239A /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B420A77F920057239A /* Starjhol.ttf */; };
+		35E932BC20A7834E0057239A /* the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B820A7834E0057239A /* the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png */; };
+		35E932BD20A7834E0057239A /* Chewbacca-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B920A7834E0057239A /* Chewbacca-1.png */; };
+		35E932BE20A7834E0057239A /* Ord_Mantell_TOR_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E932BA20A7834E0057239A /* Ord_Mantell_TOR_new.png */; };
+		35E932BF20A7834E0057239A /* Millennium_Falcon_DICE.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E932BB20A7834E0057239A /* Millennium_Falcon_DICE.png */; };
 		AC2824F99DFB86534FD7B64C /* Pods_StarWarsInformation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8BC3B059A05F0BA02921A3 /* Pods_StarWarsInformation.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,10 +47,6 @@
 		350200D8209C0FF900CA539F /* Star_Wars_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Wars_logo.png; sourceTree = "<group>"; };
 		350200D9209C0FF900CA539F /* launch_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch_background.jpg; sourceTree = "<group>"; };
 		350200DC209C113900CA539F /* info_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon.png; sourceTree = "<group>"; };
-		350200E5209C198200CA539F /* Kiros-Kidnapped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kiros-Kidnapped.png"; sourceTree = "<group>"; };
-		350200E9209C1B3D00CA539F /* lukeskywalker-1519252298974_1280w.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lukeskywalker-1519252298974_1280w.jpg"; sourceTree = "<group>"; };
-		350200EB209C1B7A00CA539F /* pg-1-72-millennium-falcon-00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pg-1-72-millennium-falcon-00.jpg"; sourceTree = "<group>"; };
-		350200ED209C204500CA539F /* r2d2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = r2d2.jpg; path = "StarWarsInformation/Launch Screen Images/r2d2.jpg"; sourceTree = SOURCE_ROOT; };
 		350200EF209C20E100CA539F /* TableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableView.storyboard; sourceTree = "<group>"; };
 		350200F1209C217900CA539F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		350200F5209C2F9500CA539F /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
@@ -73,6 +72,13 @@
 		35294E0D209973E600168295 /* InformationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationApiClient.swift; sourceTree = "<group>"; };
 		35294E0F2099745000168295 /* TableViewRowEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowEntry.swift; sourceTree = "<group>"; };
 		35294E112099747000168295 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		35E932B120A75E590057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg"; sourceTree = "<group>"; };
+		35E932B420A77F920057239A /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		35E932B520A77F930057239A /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		35E932B820A7834E0057239A /* the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png"; sourceTree = "<group>"; };
+		35E932B920A7834E0057239A /* Chewbacca-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chewbacca-1.png"; sourceTree = "<group>"; };
+		35E932BA20A7834E0057239A /* Ord_Mantell_TOR_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ord_Mantell_TOR_new.png; sourceTree = "<group>"; };
+		35E932BB20A7834E0057239A /* Millennium_Falcon_DICE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Millennium_Falcon_DICE.png; sourceTree = "<group>"; };
 		5A8CB1AC87F8348429988E59 /* Pods-StarWarsInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsInformation.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsInformation/Pods-StarWarsInformation.release.xcconfig"; sourceTree = "<group>"; };
 		6A2C6781BDB80140C52D9C6C /* Pods-StarWarsInformation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsInformation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsInformation/Pods-StarWarsInformation.debug.xcconfig"; sourceTree = "<group>"; };
 		ED8BC3B059A05F0BA02921A3 /* Pods_StarWarsInformation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsInformation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,10 +118,11 @@
 		350200E0209C18A200CA539F /* Main Menu Images */ = {
 			isa = PBXGroup;
 			children = (
-				350200ED209C204500CA539F /* r2d2.jpg */,
-				350200E9209C1B3D00CA539F /* lukeskywalker-1519252298974_1280w.jpg */,
-				350200E5209C198200CA539F /* Kiros-Kidnapped.png */,
-				350200EB209C1B7A00CA539F /* pg-1-72-millennium-falcon-00.jpg */,
+				35E932B920A7834E0057239A /* Chewbacca-1.png */,
+				35E932BB20A7834E0057239A /* Millennium_Falcon_DICE.png */,
+				35E932BA20A7834E0057239A /* Ord_Mantell_TOR_new.png */,
+				35E932B820A7834E0057239A /* the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png */,
+				35E932B120A75E590057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg */,
 			);
 			name = "Main Menu Images";
 			path = "New Group";
@@ -162,6 +169,7 @@
 		35294DF220996F7E00168295 /* StarWarsInformation */ = {
 			isa = PBXGroup;
 			children = (
+				35E932B320A77DA00057239A /* Fonts */,
 				35294E0A2099736800168295 /* Controller */,
 				35294E092099736300168295 /* View */,
 				35294E082099735E00168295 /* Model */,
@@ -210,6 +218,15 @@
 				350200FC209E00F700CA539F /* SpecificEntryGenerationClient.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		35E932B320A77DA00057239A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				35E932B520A77F930057239A /* Starjedi.ttf */,
+				35E932B420A77F920057239A /* Starjhol.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AF91EA189C0FDEBCF49EE04E /* Frameworks */ = {
@@ -281,18 +298,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				350200EE209C204500CA539F /* r2d2.jpg in Resources */,
-				350200EA209C1B3D00CA539F /* lukeskywalker-1519252298974_1280w.jpg in Resources */,
+				35E932BC20A7834E0057239A /* the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png in Resources */,
+				35E932BD20A7834E0057239A /* Chewbacca-1.png in Resources */,
 				35294E0120996F8200168295 /* LaunchScreen.storyboard in Resources */,
 				35294DFE20996F8200168295 /* Assets.xcassets in Resources */,
 				350200DA209C0FF900CA539F /* Star_Wars_logo.png in Resources */,
-				350200E6209C198200CA539F /* Kiros-Kidnapped.png in Resources */,
+				35E932B220A75E5A0057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg in Resources */,
 				350200FF209E024C00CA539F /* InformationView.storyboard in Resources */,
 				350200F0209C20E100CA539F /* TableView.storyboard in Resources */,
 				350200DB209C0FF900CA539F /* launch_background.jpg in Resources */,
 				350200DD209C113900CA539F /* info_icon.png in Resources */,
-				350200EC209C1B7B00CA539F /* pg-1-72-millennium-falcon-00.jpg in Resources */,
+				35E932BE20A7834E0057239A /* Ord_Mantell_TOR_new.png in Resources */,
+				35E932B620A77FA30057239A /* Starjedi.ttf in Resources */,
+				35E932B720A77FA60057239A /* Starjhol.ttf in Resources */,
 				35294DF920996F7E00168295 /* Main.storyboard in Resources */,
+				35E932BF20A7834E0057239A /* Millennium_Falcon_DICE.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
