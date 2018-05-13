@@ -31,28 +31,8 @@ public class InformationView {
     
     public func generateSpeciesText() -> String {
         let species: Species = Variables.species
-        var skinColours: String!
-        var hairColours: String!
         
-        var counter: Int = 1
-        for colour in species.skinColours {
-            if (counter == species.skinColours.count) {
-                skinColours.append("and \(colour)")
-            }
-            skinColours.append(colour)
-            counter += 1
-        }
-        
-        counter = 1
-        for colour in species.hairColours {
-            if (counter == species.hairColours.count) {
-                hairColours.append("and \(colour)")
-            }
-            hairColours.append(colour)
-            counter += 1
-        }
-        
-        let text: String = "\(species.name) is a species which is classified as \(species.classification). Its average height is \(species.averageHeight) and its skin colour(s) are \(skinColours). Its hair colour(s) are \(hairColours). It speaks the language \(species.language)."
+        let text: String = "\(species.name) is a species which is classified as \(species.classification). Its average height is \(species.averageHeight) and its skin colour(s) are \(species.skinColours). Its hair colour(s) are \(species.hairColours). It speaks the language \(species.language)."
         
         return text
         
