@@ -47,7 +47,7 @@ struct Variables {
                                                     returnOfTheJedi: "return-of-the-jedi.jpg",
                                                     phantomMenace: "phantom-menace.jpg",
                                                     attackOfTheClones: "attack-of-the-clones.jpg",
-                                                    theForceAwakens: "the-force-awakens.jpeg",
+                                                    theForceAwakens: "the-force-awakens.jpg",
                                                     theLastJedi: "the-last-jedi.jpg",
                                                     rogueOne: "rogue-one.jpeg",
                                                     revengeOfTheSith: "revenge-of-the-sith.jpeg"]

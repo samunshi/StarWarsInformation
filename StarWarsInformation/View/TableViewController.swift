@@ -84,6 +84,7 @@ public class TableViewController : UITableViewController {
             tableViewEntry = allRows[indexPath.row]
         }
         
+        cell.activityIndicator.isHidden = true
         cell.textLabel?.text = tableViewEntry.getName()
         cell.customURL = tableViewEntry.getUniqueInfoURL()
         return cell
@@ -98,6 +99,8 @@ public class TableViewController : UITableViewController {
         } else {
             selectedTableViewEntry = allRows[indexPath.row]
         }
+        let currentCell = tableView.cellForRow(at: indexPath) as? InformationTableViewCell
+        currentCell?.startActivityIndicator()
         
         print("Selected entry: \(selectedTableViewEntry.getName())")
         let url = selectedTableViewEntry.getUniqueInfoURL()
@@ -110,6 +113,7 @@ public class TableViewController : UITableViewController {
                 // get all the movie information here as well 
                 self.movieGenerationClient.generateMovieEntries(urls: character.movieUrls, completion: { (movies) in
                     Variables.movieArray = movies
+                    currentCell?.stopActivityIndicator()
                     self.performSegue(withIdentifier: "showInfoView", sender: nil)
                 })
             }
@@ -120,6 +124,7 @@ public class TableViewController : UITableViewController {
                 Variables.planet = planet
                 self.movieGenerationClient.generateMovieEntries(urls: planet.movieUrls, completion: { (movies) in
                     Variables.movieArray = movies
+                    currentCell?.stopActivityIndicator()
                     self.performSegue(withIdentifier: "showInfoView", sender: nil)
                 })
             }
@@ -130,6 +135,8 @@ public class TableViewController : UITableViewController {
                 Variables.species = species
                 self.movieGenerationClient.generateMovieEntries(urls: species.movieUrls, completion: { (movies) in
                     Variables.movieArray = movies
+                    currentCell?.stopActivityIndicator()
+                    
                     self.performSegue(withIdentifier: "showInfoView", sender: nil)
                 })
             }
@@ -140,6 +147,8 @@ public class TableViewController : UITableViewController {
                 Variables.vehicle = vehicle
                 self.movieGenerationClient.generateMovieEntries(urls: vehicle.movieUrls, completion: { (movies) in
                     Variables.movieArray = movies
+                    currentCell?.stopActivityIndicator()
+
                     self.performSegue(withIdentifier: "showInfoView", sender: nil)
                 })
             }

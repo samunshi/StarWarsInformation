@@ -32,9 +32,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="68I-pn-Z87">
+                                            <rect key="frame" x="340" y="15" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="68I-pn-Z87" id="gmn-CW-dfN"/>
                                     <outlet property="nameLabel" destination="HY8-Qj-vDg" id="XtZ-2w-ZkO"/>
                                 </connections>
                             </tableViewCell>
