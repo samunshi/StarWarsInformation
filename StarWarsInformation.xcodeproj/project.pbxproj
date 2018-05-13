@@ -33,6 +33,8 @@
 		35294E0E209973E600168295 /* InformationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0D209973E600168295 /* InformationApiClient.swift */; };
 		35294E102099745000168295 /* TableViewRowEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0F2099745000168295 /* TableViewRowEntry.swift */; };
 		35294E122099747000168295 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E112099747000168295 /* CellType.swift */; };
+		35E1FC6B20A7FFC20012CCA0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1FC6A20A7FFC20012CCA0 /* Movie.swift */; };
+		35E1FC6D20A8036E0012CCA0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1FC6C20A8036E0012CCA0 /* MovieCollectionViewCell.swift */; };
 		35E932B220A75E5A0057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B120A75E590057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg */; };
 		35E932B620A77FA30057239A /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B520A77F930057239A /* Starjedi.ttf */; };
 		35E932B720A77FA60057239A /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B420A77F920057239A /* Starjhol.ttf */; };
@@ -72,6 +74,8 @@
 		35294E0D209973E600168295 /* InformationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationApiClient.swift; sourceTree = "<group>"; };
 		35294E0F2099745000168295 /* TableViewRowEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowEntry.swift; sourceTree = "<group>"; };
 		35294E112099747000168295 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		35E1FC6A20A7FFC20012CCA0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		35E1FC6C20A8036E0012CCA0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		35E932B120A75E590057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg"; sourceTree = "<group>"; };
 		35E932B420A77F920057239A /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
 		35E932B520A77F930057239A /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				350200FA209D35AA00CA539F /* InformationTableViewCell.swift */,
+				35E1FC6C20A8036E0012CCA0 /* MovieCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				35020107209E043900CA539F /* Vehicle.swift */,
 				35020109209E044000CA539F /* Species.swift */,
 				3502010B209E5A1300CA539F /* SingularInfoModel.swift */,
+				35E1FC6A20A7FFC20012CCA0 /* Movie.swift */,
 			);
 			path = "Type Specific Models";
 			sourceTree = "<group>";
@@ -379,12 +385,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E1FC6B20A7FFC20012CCA0 /* Movie.swift in Sources */,
 				35294DF620996F7E00168295 /* MainMenuViewController.swift in Sources */,
 				350200F2209C217900CA539F /* TableViewController.swift in Sources */,
 				350200F8209CC42E00CA539F /* TableViewEntryGenerationClient.swift in Sources */,
 				35020104209E03F300CA539F /* Character.swift in Sources */,
 				3502010C209E5A1300CA539F /* SingularInfoModel.swift in Sources */,
 				35020108209E043900CA539F /* Vehicle.swift in Sources */,
+				35E1FC6D20A8036E0012CCA0 /* MovieCollectionViewCell.swift in Sources */,
 				35294E122099747000168295 /* CellType.swift in Sources */,
 				35020106209E03FA00CA539F /* Planet.swift in Sources */,
 				350200FD209E00F700CA539F /* SpecificEntryGenerationClient.swift in Sources */,

@@ -9,16 +9,21 @@
 import Foundation
 import UIKit
 
-public class InformationViewController: UIViewController {
+public class InformationViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
     let infoView: InformationView = InformationView()
     
+    var allMovies = [Movie]()
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        var tempMovie = Movie(name: "The Empire Strikes Back")
+        allMovies.append(tempMovie)
     }
     
     private func setupView() {
@@ -61,6 +66,22 @@ public class InformationViewController: UIViewController {
     private func generateVehicleText() {
         print (infoView.generateVehiclesText())
         textView.text = infoView.generateVehiclesText()
+    }
+    
+    // MARK -- Horizontal Collection View
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // TODO: Return based on number of movies
+        // return allMovies.count
+        return 1
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell  else {
+            fatalError("Could not identify cell type")
+        }
+        cell.moviePosterImageView.image = UIImage(named: "Chewbacca-1.png")
+        
+        return cell
     }
     
 }
