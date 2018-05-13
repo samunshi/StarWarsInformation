@@ -12,6 +12,6 @@ import UIKit
 public class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var moviePosterImageView: UIImageView!
-    var imdbUrl: String!
+    var movieName: String!
     
 }

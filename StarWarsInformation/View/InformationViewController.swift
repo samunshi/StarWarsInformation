@@ -22,7 +22,7 @@ public class InformationViewController: UIViewController, UICollectionViewDelega
         super.viewDidLoad()
         setupView()
         
-        var tempMovie = Movie(name: "The Empire Strikes Back")
+        let tempMovie = Movie(name: Variables.empireStrikesBack)
         allMovies.append(tempMovie)
     }
     
@@ -79,7 +79,8 @@ public class InformationViewController: UIViewController, UICollectionViewDelega
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell  else {
             fatalError("Could not identify cell type")
         }
-        cell.moviePosterImageView.image = UIImage(named: "Chewbacca-1.png")
+        let movie = allMovies[0] // should be indexPath.row
+        cell.moviePosterImageView.image = UIImage(named: Variables.nameToImageName[movie.name]!)
         
         return cell
     }
