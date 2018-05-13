@@ -10,8 +10,10 @@ import Foundation
 
 public class Movie {
     var name: String!
+    var imdbUrl: String!
     
-    public init(name: String) {
+    public init(name: String, imdbUrl: String) {
         self.name = name
+        self.imdbUrl = imdbUrl
     }    
 }

@@ -18,9 +18,10 @@ public class Vehicle: SingularInfoModel {
     var length: String
     var manufacturer: String
     var passengers: String
+    var movieUrls: [String]
     
     public init (name: String, type: String, cargoCapacity: String, crew: String,
-                 cost: String, length: String, manufacturer: String, passengers: String) {
+                 cost: String, length: String, manufacturer: String, passengers: String, movieUrls: [String]) {
         
         self.name = name
         self.type = type
@@ -30,6 +31,7 @@ public class Vehicle: SingularInfoModel {
         self.length = length
         self.manufacturer = manufacturer
         self.passengers = passengers
+        self.movieUrls = movieUrls
         
     }
     

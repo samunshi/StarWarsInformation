@@ -13,6 +13,7 @@ public class TableViewController : UITableViewController {
     
     let tableViewEntryGenerationClient: TableViewEntryGenerationClient = TableViewEntryGenerationClient()
     let specificEntryGenerationClient: SpecificEntryGenerationClient = SpecificEntryGenerationClient()
+    let movieGenerationClient: MovieGenerationClient = MovieGenerationClient()
     
     let allRows: [TableViewRowEntry] = Variables.dataArray
     var filteredRows = [TableViewRowEntry]()
@@ -106,35 +107,45 @@ public class TableViewController : UITableViewController {
             specificEntryGenerationClient.getCharacterEntryInformation(url: url) { (character) in
                 print ("Got parsed character and its name is \(character.name)")
                 Variables.character = character
-                self.performSegue(withIdentifier: "showInfoView", sender: nil)
+                // get all the movie information here as well 
+                self.movieGenerationClient.generateMovieEntries(urls: character.movieUrls, completion: { (movies) in
+                    Variables.movieArray = movies
+                    self.performSegue(withIdentifier: "showInfoView", sender: nil)
+                })
             }
             break
         case CellType.planet:
             specificEntryGenerationClient.getPlanetEntryInformation(url: url) { (planet) in
                 print ("Got parsed planet and its name is \(planet.name)")
                 Variables.planet = planet
-                self.performSegue(withIdentifier: "showInfoView", sender: nil)
-
+                self.movieGenerationClient.generateMovieEntries(urls: planet.movieUrls, completion: { (movies) in
+                    Variables.movieArray = movies
+                    self.performSegue(withIdentifier: "showInfoView", sender: nil)
+                })
             }
             break
         case CellType.species:
             specificEntryGenerationClient.getSpeciesEntryInformation(url: url) { (species) in
                 print ("Got parsed species and its name is \(species.name)")
                 Variables.species = species
-                self.performSegue(withIdentifier: "showInfoView", sender: nil)
-
+                self.movieGenerationClient.generateMovieEntries(urls: species.movieUrls, completion: { (movies) in
+                    Variables.movieArray = movies
+                    self.performSegue(withIdentifier: "showInfoView", sender: nil)
+                })
             }
             break
         case CellType.vehicle:
             specificEntryGenerationClient.getVehiclesEntryInformation(url: url) { (vehicle) in
                 print("Got parsed vehicle and its name is \(vehicle.name)")
                 Variables.vehicle = vehicle
-                self.performSegue(withIdentifier: "showInfoView", sender: nil)
+                self.movieGenerationClient.generateMovieEntries(urls: vehicle.movieUrls, completion: { (movies) in
+                    Variables.movieArray = movies
+                    self.performSegue(withIdentifier: "showInfoView", sender: nil)
+                })
             }
             break
         }
     }
-    
 }
 
 // MARK -- Used to implement search functionality
@@ -142,7 +153,4 @@ extension TableViewController: UISearchResultsUpdating {
     public func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
-    
 }
-
-

@@ -115,8 +115,12 @@ public class SpecificEntryGenerationClient {
         let gender = json["gender"].stringValue
         let height = json["height"].stringValue
         let eyeColour = json["eye_color"].stringValue
+        var movieUrls = [String]()
+        if let mu = json["films"].arrayObject as? [String] {
+            movieUrls = mu
+        }
         
-        return Character(name: name, birthYear: birthYear, hairColour: hairColour, gender: gender, height: height, eyeColour: eyeColour)
+        return Character(name: name, birthYear: birthYear, hairColour: hairColour, gender: gender, height: height, eyeColour: eyeColour, movieUrls: movieUrls)
         
     }
     
@@ -128,9 +132,13 @@ public class SpecificEntryGenerationClient {
         let orbitalPeriod = json["orbital_period"].stringValue
         let population = json["population"].stringValue
         let terrain = json["terrain"].stringValue
+        var movieUrls = [String]()
+        if let mu = json["films"].arrayObject as? [String] {
+            movieUrls = mu
+        }
         
         return Planet(name: name, climate: climate, diameter: diamater, gravity: gravity,
-                      orbitalPeriod: orbitalPeriod, population: population, terrain: terrain)
+                      orbitalPeriod: orbitalPeriod, population: population, terrain: terrain, movieUrls: movieUrls)
 
     }
     
@@ -140,17 +148,16 @@ public class SpecificEntryGenerationClient {
         let classification = json["classification"].stringValue
         // let homeworld = json["homeworld"].stringValue
         let language = json["language"].stringValue
-        var skinColours = [String]()
-        if let sc = json["skin_colors"].arrayObject as? [String] {
-            skinColours = sc
-        }
-        var hairColours = [String]()
-        if let hc = json["hair_colors"].arrayObject as? [String] {
-            hairColours = hc
+        var movieUrls = [String]()
+        if let mu = json["films"].arrayObject as? [String] {
+            movieUrls = mu
         }
         
+        let skinColours = json["skin_colors"].stringValue
+        let hairColours = json["hair_colors"].stringValue
+        
         return Species(name: name, averageHeight: averageHeight, classification: classification,
-                       language: language, skinColours: skinColours, hairColours: hairColours)
+                       language: language, skinColours: skinColours, hairColours: hairColours, movieUrls: movieUrls)
     }
     
     private func generateVehicleModel(json: JSON) -> Vehicle {
@@ -162,9 +169,13 @@ public class SpecificEntryGenerationClient {
         let length = json["length"].stringValue
         let manufacturer = json["manufacturer"].stringValue
         let passengers = json["passengers"].stringValue
+        var movieUrls = [String]()
+        if let mu = json["films"].arrayObject as? [String] {
+            movieUrls = mu
+        }
         
         return Vehicle(name: name, type: type, cargoCapacity: cargoCapacity, crew: crew, cost: cost,
-                       length: length, manufacturer: manufacturer, passengers: passengers)
+                       length: length, manufacturer: manufacturer, passengers: passengers, movieUrls: movieUrls)
     }
     
 }

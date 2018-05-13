@@ -16,14 +16,12 @@ public class InformationViewController: UIViewController, UICollectionViewDelega
     
     let infoView: InformationView = InformationView()
     
-    var allMovies = [Movie]()
+    var allMovies = Variables.movieArray
 
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         
-        let tempMovie = Movie(name: Variables.empireStrikesBack)
-        allMovies.append(tempMovie)
     }
     
     private func setupView() {
@@ -71,18 +69,30 @@ public class InformationViewController: UIViewController, UICollectionViewDelega
     // MARK -- Horizontal Collection View
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // TODO: Return based on number of movies
-        // return allMovies.count
-        return 1
+        return allMovies.count
+        // return 1
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell  else {
             fatalError("Could not identify cell type")
         }
-        let movie = allMovies[0] // should be indexPath.row
+        let movie = allMovies[indexPath.row] // should be indexPath.row
         cell.moviePosterImageView.image = UIImage(named: Variables.nameToImageName[movie.name]!)
+        cell.movieNameLabel.text = movie.name
         
         return cell
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Cell selected")
+        let movie = allMovies[indexPath.row]
+        
+        if let link = URL(string: movie.imdbUrl!) {
+            print ("Movie url: \(movie.imdbUrl!)")
+            let options: [String: Any] = [UIApplicationOpenURLOptionUniversalLinksOnly: 0]
+            UIApplication.shared.open(link, options: options, completionHandler: nil)
+        }
     }
     
 }

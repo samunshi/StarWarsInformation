@@ -15,11 +15,12 @@ public class Species: SingularInfoModel {
     var classification: String
 //    var homeworld: String
     var language: String
-    var skinColours: [String]
-    var hairColours: [String]
+    var skinColours: String
+    var hairColours: String
+    var movieUrls: [String]
     
-    public init(name: String, averageHeight: String, classification: String, language: String, skinColours: [String],
-                hairColours: [String]) {
+    public init(name: String, averageHeight: String, classification: String, language: String, skinColours: String,
+                hairColours: String, movieUrls: [String]) {
         self.name = name
         self.averageHeight = averageHeight
         self.classification = classification
@@ -27,6 +28,7 @@ public class Species: SingularInfoModel {
         self.language = language
         self.skinColours = skinColours
         self.hairColours = hairColours
+        self.movieUrls = movieUrls
         
     }
 }

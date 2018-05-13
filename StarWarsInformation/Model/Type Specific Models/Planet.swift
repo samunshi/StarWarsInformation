@@ -17,9 +17,10 @@ public class Planet: SingularInfoModel {
     var orbitalPeriod: String
     var population: String
     var terrain: String
+    var movieUrls: [String]
     
     public init(name: String, climate: String, diameter: String, gravity: String,
-                orbitalPeriod: String, population: String, terrain: String) {
+                orbitalPeriod: String, population: String, terrain: String, movieUrls: [String]) {
         self.name = name
         self.climate = climate
         self.diamater = diameter
@@ -27,5 +28,6 @@ public class Planet: SingularInfoModel {
         self.orbitalPeriod = orbitalPeriod
         self.population = population
         self.terrain = terrain
+        self.movieUrls = movieUrls
     }
 }

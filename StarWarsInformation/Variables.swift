@@ -20,15 +20,15 @@ struct Variables {
     static var vehicle: Vehicle!
     
     // Define all movie names so you use the same ones
-    static let aNewHope = "Star Wars: Episode IV A New Hope"
-    static let empireStrikesBack = "Star Wars: Episode V The Empire Strikes Back"
-    static let returnOfTheJedi = "Star Wars: Episode VI Return of the Jedi"
-    static let phantomMenace = "Star Wars: Episode I The Phantom Menance"
-    static let attackOfTheClones = "Star Wars: Episode II Attack of the Clones"
-    static let theForceAwakens = "Star Wars: Episode VII The Force Awakens"
-    static let theLastJedi = "Star Wars: Episode VIII The Last Jedi"
-    static let rogueOne = "Rogue One: A Star Wars Story"
-    static let revengeOfTheSith = "Star Wars: Episode III Revenge of the Sith"
+    static let aNewHope = "A New Hope"
+    static let empireStrikesBack = "The Empire Strikes Back"
+    static let returnOfTheJedi = "Return of the Jedi"
+    static let phantomMenace = "The Phantom Menace"
+    static let attackOfTheClones = "Attack of the Clones"
+    static let theForceAwakens = "The Force Awakens"
+    static let theLastJedi = "Star Wars: Episode VIII The Last Jedi" // not supported by API yet
+    static let rogueOne = "Rogue One: A Star Wars Story" // not supported by API yet
+    static let revengeOfTheSith = "Revenge of the Sith"
     
     // Movie Name to imdbUrl Dict
     static let nameToInfoUrl: [String: String] = [aNewHope: "https://m.imdb.com/title/tt0076759/?ref_=nv_sr_5",
@@ -43,11 +43,11 @@ struct Variables {
     
     // Movie Name to image name Dict
     static let nameToImageName: [String: String] = [aNewHope: "a-new-hope.jpg",
-                                                    empireStrikesBack: "attack-of-the-clones.jpg",
-                                                    returnOfTheJedi: "empire-strikes-back.jpg",
+                                                    empireStrikesBack: "empire-strikes-back.jpg",
+                                                    returnOfTheJedi: "return-of-the-jedi.jpg",
                                                     phantomMenace: "phantom-menace.jpg",
-                                                    attackOfTheClones: "return-of-jedi.jpg",
-                                                    theForceAwakens: "revenge-of-the-sith.jpeg",
+                                                    attackOfTheClones: "attack-of-the-clones.jpg",
+                                                    theForceAwakens: "the-force-awakens.jpeg",
                                                     theLastJedi: "the-last-jedi.jpg",
                                                     rogueOne: "rogue-one.jpeg",
                                                     revengeOfTheSith: "revenge-of-the-sith.jpeg"]
