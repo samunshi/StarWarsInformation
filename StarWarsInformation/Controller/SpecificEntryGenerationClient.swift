@@ -14,6 +14,8 @@ public class SpecificEntryGenerationClient {
     let infoClient: InformationApiClient = InformationApiClient()
     let group = DispatchGroup()
     
+    // Each method is responsible for generating a unique kind of specific entry
+    
     public func getCharacterEntryInformation(url: String, completion: @escaping (Character) -> Void) {
         var characterToReturn: Character!
         

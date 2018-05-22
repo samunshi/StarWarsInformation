@@ -33,6 +33,16 @@
 		35294E0E209973E600168295 /* InformationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0D209973E600168295 /* InformationApiClient.swift */; };
 		35294E102099745000168295 /* TableViewRowEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0F2099745000168295 /* TableViewRowEntry.swift */; };
 		35294E122099747000168295 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E112099747000168295 /* CellType.swift */; };
+		3596746820A808580093B263 /* MovieGenerationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3596746720A808580093B263 /* MovieGenerationClient.swift */; };
+		3596747320A8BDFA0093B263 /* attack-of-the-clones.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746A20A8BDF90093B263 /* attack-of-the-clones.jpg */; };
+		3596747420A8BDFA0093B263 /* the-force-awakens.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746B20A8BDF90093B263 /* the-force-awakens.jpg */; };
+		3596747520A8BDFA0093B263 /* a-new-hope.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746C20A8BDF90093B263 /* a-new-hope.jpg */; };
+		3596747620A8BDFA0093B263 /* the-last-jedi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746D20A8BDF90093B263 /* the-last-jedi.jpg */; };
+		3596747720A8BDFA0093B263 /* revenge-of-the-sith.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746E20A8BDF90093B263 /* revenge-of-the-sith.jpeg */; };
+		3596747820A8BDFA0093B263 /* empire-strikes-back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746F20A8BDFA0093B263 /* empire-strikes-back.jpg */; };
+		3596747920A8BDFA0093B263 /* return-of-the-jedi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596747020A8BDFA0093B263 /* return-of-the-jedi.jpg */; };
+		3596747A20A8BDFA0093B263 /* rogue-one.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3596747120A8BDFA0093B263 /* rogue-one.jpeg */; };
+		3596747B20A8BDFA0093B263 /* phantom-menace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596747220A8BDFA0093B263 /* phantom-menace.jpg */; };
 		35E1FC6B20A7FFC20012CCA0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1FC6A20A7FFC20012CCA0 /* Movie.swift */; };
 		35E1FC6D20A8036E0012CCA0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E1FC6C20A8036E0012CCA0 /* MovieCollectionViewCell.swift */; };
 		35E932B220A75E5A0057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E932B120A75E590057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg */; };
@@ -74,6 +84,16 @@
 		35294E0D209973E600168295 /* InformationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationApiClient.swift; sourceTree = "<group>"; };
 		35294E0F2099745000168295 /* TableViewRowEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowEntry.swift; sourceTree = "<group>"; };
 		35294E112099747000168295 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		3596746720A808580093B263 /* MovieGenerationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenerationClient.swift; sourceTree = "<group>"; };
+		3596746A20A8BDF90093B263 /* attack-of-the-clones.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "attack-of-the-clones.jpg"; sourceTree = "<group>"; };
+		3596746B20A8BDF90093B263 /* the-force-awakens.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-force-awakens.jpg"; sourceTree = "<group>"; };
+		3596746C20A8BDF90093B263 /* a-new-hope.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "a-new-hope.jpg"; sourceTree = "<group>"; };
+		3596746D20A8BDF90093B263 /* the-last-jedi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-last-jedi.jpg"; sourceTree = "<group>"; };
+		3596746E20A8BDF90093B263 /* revenge-of-the-sith.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "revenge-of-the-sith.jpeg"; sourceTree = "<group>"; };
+		3596746F20A8BDFA0093B263 /* empire-strikes-back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "empire-strikes-back.jpg"; sourceTree = "<group>"; };
+		3596747020A8BDFA0093B263 /* return-of-the-jedi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "return-of-the-jedi.jpg"; sourceTree = "<group>"; };
+		3596747120A8BDFA0093B263 /* rogue-one.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rogue-one.jpeg"; sourceTree = "<group>"; };
+		3596747220A8BDFA0093B263 /* phantom-menace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "phantom-menace.jpg"; sourceTree = "<group>"; };
 		35E1FC6A20A7FFC20012CCA0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		35E1FC6C20A8036E0012CCA0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		35E932B120A75E590057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg"; sourceTree = "<group>"; };
@@ -185,6 +205,7 @@
 				350200EF209C20E100CA539F /* TableView.storyboard */,
 				35294DFF20996F8200168295 /* LaunchScreen.storyboard */,
 				350200FE209E024C00CA539F /* InformationView.storyboard */,
+				3596746920A808D20093B263 /* Movie Poster Images */,
 				350200E0209C18A200CA539F /* Main Menu Images */,
 				350200D7209C0FCF00CA539F /* Launch Screen Images */,
 				35294E0220996F8200168295 /* Info.plist */,
@@ -222,8 +243,25 @@
 			children = (
 				350200F7209CC42E00CA539F /* TableViewEntryGenerationClient.swift */,
 				350200FC209E00F700CA539F /* SpecificEntryGenerationClient.swift */,
+				3596746720A808580093B263 /* MovieGenerationClient.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3596746920A808D20093B263 /* Movie Poster Images */ = {
+			isa = PBXGroup;
+			children = (
+				3596746C20A8BDF90093B263 /* a-new-hope.jpg */,
+				3596746A20A8BDF90093B263 /* attack-of-the-clones.jpg */,
+				3596746F20A8BDFA0093B263 /* empire-strikes-back.jpg */,
+				3596747220A8BDFA0093B263 /* phantom-menace.jpg */,
+				3596747020A8BDFA0093B263 /* return-of-the-jedi.jpg */,
+				3596746E20A8BDF90093B263 /* revenge-of-the-sith.jpeg */,
+				3596747120A8BDFA0093B263 /* rogue-one.jpeg */,
+				3596746B20A8BDF90093B263 /* the-force-awakens.jpg */,
+				3596746D20A8BDF90093B263 /* the-last-jedi.jpg */,
+			);
+			path = "Movie Poster Images";
 			sourceTree = "<group>";
 		};
 		35E932B320A77DA00057239A /* Fonts */ = {
@@ -304,19 +342,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3596747320A8BDFA0093B263 /* attack-of-the-clones.jpg in Resources */,
 				35E932BC20A7834E0057239A /* the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png in Resources */,
+				3596747620A8BDFA0093B263 /* the-last-jedi.jpg in Resources */,
 				35E932BD20A7834E0057239A /* Chewbacca-1.png in Resources */,
 				35294E0120996F8200168295 /* LaunchScreen.storyboard in Resources */,
+				3596747A20A8BDFA0093B263 /* rogue-one.jpeg in Resources */,
+				3596747B20A8BDFA0093B263 /* phantom-menace.jpg in Resources */,
 				35294DFE20996F8200168295 /* Assets.xcassets in Resources */,
+				3596747920A8BDFA0093B263 /* return-of-the-jedi.jpg in Resources */,
 				350200DA209C0FF900CA539F /* Star_Wars_logo.png in Resources */,
+				3596747520A8BDFA0093B263 /* a-new-hope.jpg in Resources */,
 				35E932B220A75E5A0057239A /* smartphone-wallpaper-star-wars-6f1b6988545105b9a9bcb8e3c651250e-wallpaper-cellphone-star-wars-wallpaper.jpg in Resources */,
+				3596747720A8BDFA0093B263 /* revenge-of-the-sith.jpeg in Resources */,
 				350200FF209E024C00CA539F /* InformationView.storyboard in Resources */,
 				350200F0209C20E100CA539F /* TableView.storyboard in Resources */,
+				3596747820A8BDFA0093B263 /* empire-strikes-back.jpg in Resources */,
 				350200DB209C0FF900CA539F /* launch_background.jpg in Resources */,
 				350200DD209C113900CA539F /* info_icon.png in Resources */,
 				35E932BE20A7834E0057239A /* Ord_Mantell_TOR_new.png in Resources */,
 				35E932B620A77FA30057239A /* Starjedi.ttf in Resources */,
 				35E932B720A77FA60057239A /* Starjhol.ttf in Resources */,
+				3596747420A8BDFA0093B263 /* the-force-awakens.jpg in Resources */,
 				35294DF920996F7E00168295 /* Main.storyboard in Resources */,
 				35E932BF20A7834E0057239A /* Millennium_Falcon_DICE.png in Resources */,
 			);
@@ -391,6 +438,7 @@
 				350200F8209CC42E00CA539F /* TableViewEntryGenerationClient.swift in Sources */,
 				35020104209E03F300CA539F /* Character.swift in Sources */,
 				3502010C209E5A1300CA539F /* SingularInfoModel.swift in Sources */,
+				3596746820A808580093B263 /* MovieGenerationClient.swift in Sources */,
 				35020108209E043900CA539F /* Vehicle.swift in Sources */,
 				35E1FC6D20A8036E0012CCA0 /* MovieCollectionViewCell.swift in Sources */,
 				35294E122099747000168295 /* CellType.swift in Sources */,

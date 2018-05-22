@@ -17,6 +17,7 @@ public class TableViewEntryGenerationClient {
     let infoClient: InformationApiClient = InformationApiClient()
     let group = DispatchGroup()
     
+    // method starts by gathering all data for one page, parsing it, and hitting all subsequent urls indicated within the model itself.
     public func generateTableViewEntries(type: CellType, completion: @escaping ([TableViewRowEntry]) -> Void) {
         // Reset the array incase of a previous request
         tableViewEntries.removeAll()
@@ -37,7 +38,7 @@ public class TableViewEntryGenerationClient {
             self.subsequentRequestHandler(type: type)
             self.group.leave()
         }
-        group.notify(queue: .main) {
+        group.notify(queue: .main) { // only proceed with completion when we can guarantee that all requests are done
             print ("All requests done")
             completion(self.tableViewEntries)
         }

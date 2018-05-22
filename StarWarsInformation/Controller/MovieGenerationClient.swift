@@ -14,7 +14,7 @@ public class MovieGenerationClient {
     let infoClient: InformationApiClient = InformationApiClient()
     let dispatchGroup = DispatchGroup()
     
-    // There are multiple urls to hit
+    // There are multiple urls to hit to get all the movie information
     public func generateMovieEntries(urls: [String], completion: @escaping ([Movie]) -> Void) {
         var generatedMovies = [Movie]()
         // For each url, make a request and parse it to movies
