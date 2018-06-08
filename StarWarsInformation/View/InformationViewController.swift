@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class InformationViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+public class InformationViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
@@ -66,7 +66,10 @@ public class InformationViewController: UIViewController, UICollectionViewDelega
         textView.text = infoView.generateVehiclesText()
     }
     
-    // MARK -- Horizontal Collection View
+}
+
+// MARK -- Horizontal Collection View
+extension InformationViewController : UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // TODO: Return based on number of movies
         return allMovies.count
@@ -84,6 +87,9 @@ public class InformationViewController: UIViewController, UICollectionViewDelega
         return cell
     }
     
+}
+
+extension InformationViewController: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell selected")
         let movie = allMovies[indexPath.row]
@@ -94,5 +100,4 @@ public class InformationViewController: UIViewController, UICollectionViewDelega
             UIApplication.shared.open(link, options: options, completionHandler: nil)
         }
     }
-    
 }
