@@ -34,7 +34,7 @@ public class TableViewEntryGenerationClient {
                 }
             }
             print ("Table view entry array size is \(self.tableViewEntries.count)")
-            print("Next URL is: \(self.nextURL)")
+            print("Next URL is: \(String(describing: self.nextURL))")
             self.subsequentRequestHandler(type: type)
             self.group.leave()
         }
@@ -58,7 +58,7 @@ public class TableViewEntryGenerationClient {
                     }
                 }
                 print ("Table view entry array size is \(self.tableViewEntries.count)")
-                print("Next URL is: \(self.nextURL)")
+                print("Next URL is: \(String(describing: self.nextURL))")
                 self.subsequentRequestHandler(type: type)
             } else {
                 self.nextURL = nil
@@ -70,7 +70,7 @@ public class TableViewEntryGenerationClient {
                     }
                 }
                 print ("Table view entry array size is \(self.tableViewEntries.count)")
-                print("Next URL is: \(self.nextURL)")
+                print("Next URL is: \(String(describing: self.nextURL))")
             }
             self.group.leave()
         }

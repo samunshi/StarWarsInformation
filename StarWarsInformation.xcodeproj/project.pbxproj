@@ -33,6 +33,8 @@
 		35294E0E209973E600168295 /* InformationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0D209973E600168295 /* InformationApiClient.swift */; };
 		35294E102099745000168295 /* TableViewRowEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E0F2099745000168295 /* TableViewRowEntry.swift */; };
 		35294E122099747000168295 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294E112099747000168295 /* CellType.swift */; };
+		357826B121F51961003D0A64 /* MainMenuInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357826B021F51961003D0A64 /* MainMenuInformationCell.swift */; };
+		357826B321F52026003D0A64 /* MainMenuInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357826B221F52026003D0A64 /* MainMenuInformationModel.swift */; };
 		3596746820A808580093B263 /* MovieGenerationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3596746720A808580093B263 /* MovieGenerationClient.swift */; };
 		3596747320A8BDFA0093B263 /* attack-of-the-clones.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746A20A8BDF90093B263 /* attack-of-the-clones.jpg */; };
 		3596747420A8BDFA0093B263 /* the-force-awakens.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3596746B20A8BDF90093B263 /* the-force-awakens.jpg */; };
@@ -84,6 +86,8 @@
 		35294E0D209973E600168295 /* InformationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationApiClient.swift; sourceTree = "<group>"; };
 		35294E0F2099745000168295 /* TableViewRowEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRowEntry.swift; sourceTree = "<group>"; };
 		35294E112099747000168295 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		357826B021F51961003D0A64 /* MainMenuInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuInformationCell.swift; sourceTree = "<group>"; };
+		357826B221F52026003D0A64 /* MainMenuInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuInformationModel.swift; sourceTree = "<group>"; };
 		3596746720A808580093B263 /* MovieGenerationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenerationClient.swift; sourceTree = "<group>"; };
 		3596746A20A8BDF90093B263 /* attack-of-the-clones.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "attack-of-the-clones.jpg"; sourceTree = "<group>"; };
 		3596746B20A8BDF90093B263 /* the-force-awakens.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "the-force-awakens.jpg"; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			children = (
 				350200FA209D35AA00CA539F /* InformationTableViewCell.swift */,
 				35E1FC6C20A8036E0012CCA0 /* MovieCollectionViewCell.swift */,
+				357826B021F51961003D0A64 /* MainMenuInformationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				35294E0D209973E600168295 /* InformationApiClient.swift */,
 				35294E0F2099745000168295 /* TableViewRowEntry.swift */,
 				35294E112099747000168295 /* CellType.swift */,
+				357826B221F52026003D0A64 /* MainMenuInformationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				350200F8209CC42E00CA539F /* TableViewEntryGenerationClient.swift in Sources */,
 				35020104209E03F300CA539F /* Character.swift in Sources */,
 				3502010C209E5A1300CA539F /* SingularInfoModel.swift in Sources */,
+				357826B321F52026003D0A64 /* MainMenuInformationModel.swift in Sources */,
 				3596746820A808580093B263 /* MovieGenerationClient.swift in Sources */,
 				35020108209E043900CA539F /* Vehicle.swift in Sources */,
 				35E1FC6D20A8036E0012CCA0 /* MovieCollectionViewCell.swift in Sources */,
@@ -452,6 +459,7 @@
 				3502010A209E044000CA539F /* Species.swift in Sources */,
 				35020112209E892600CA539F /* InformationView.swift in Sources */,
 				35294E0E209973E600168295 /* InformationApiClient.swift in Sources */,
+				357826B121F51961003D0A64 /* MainMenuInformationCell.swift in Sources */,
 				3502010E209E79CE00CA539F /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,22 +8,46 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController {
+class MainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    // MARK: Properties
+    let optionsCollectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = .init()
+        layout.scrollDirection = .vertical
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = UIColor.black
+        collectionView.isScrollEnabled = false
+        return collectionView
+    }()
     
-    // Outlet connections
-    @IBOutlet weak var planetButton: UIImageView!
-    @IBOutlet weak var speciesButton: UIImageView!
-    @IBOutlet weak var characterButton: UIImageView!
-    @IBOutlet weak var vehicleButton: UIImageView!
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "StarWarsinfo"
+        label.font = UIFont.init(name: "Starjedi", size: 25)
+        label.textColor = UIColor.yellow
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var speciesIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var characterIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var vehicleIndicator: UIActivityIndicatorView!
+    let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Welcome! Please select your option:"
+        label.font = UIFont.init(name: "Starjedi", size: 14)
+        label.textColor = UIColor.yellow
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
+    let activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
     
-    // Local variables
     var cellTypeBeingPassed: CellType!
+    
+    var mainMenuModels: [MainMenuInformationModel] = []
     
     // Controller layer
     let tableViewEntryGenerationClient : TableViewEntryGenerationClient = TableViewEntryGenerationClient()
@@ -32,73 +56,93 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Main Menu"
         
-        initializeImageTouchEvents()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        activityIndicator.stopAnimating()
-        showAllButtons()
-        self.view.isUserInteractionEnabled = true
-    }
-    
-    func initializeImageTouchEvents() {
-        let planetTap = UITapGestureRecognizer(target: self, action: #selector(MainMenuViewController.handlePlanetButtonTapped))
-        planetButton.isUserInteractionEnabled = true
-        planetButton.addGestureRecognizer(planetTap)
+        self.view.backgroundColor = .black
         
-        let speciesTap = UITapGestureRecognizer(target: self, action: #selector(MainMenuViewController.handleSpeciesButtonTapped))
-        speciesButton.isUserInteractionEnabled = true
-        speciesButton.addGestureRecognizer(speciesTap)
+        optionsCollectionView.dataSource = self
+        optionsCollectionView.delegate = self
         
-        let characterTap = UITapGestureRecognizer(target: self, action: #selector(MainMenuViewController.handleCharacterButtonTapped))
-        characterButton.isUserInteractionEnabled = true
-        characterButton.addGestureRecognizer(characterTap)
+        optionsCollectionView.register(MainMenuInformationCell.self, forCellWithReuseIdentifier: "MainMenuInformationCell")
         
-        let vehicleTap = UITapGestureRecognizer(target: self, action: #selector(MainMenuViewController.handleVehicleButtonTapped))
-        vehicleButton.isUserInteractionEnabled = true
-        vehicleButton.addGestureRecognizer(vehicleTap)
+        commonInit()
         
     }
     
-    @objc
-    func handleVehicleButtonTapped() {
-        vehicleButton.isHidden = true
-        vehicleIndicator.startAnimating()
-        self.view.isUserInteractionEnabled = false
-        
-        Variables.tableType = CellType.vehicle
-        performInformationRequest()
+    override func viewWillAppear(_ animated: Bool) {
+        generateMainMenuModels()
     }
     
-    @objc
-    func handlePlanetButtonTapped() {
-        planetButton.isHidden = true
-        activityIndicator.startAnimating()
-        self.view.isUserInteractionEnabled = false
+    func commonInit() {
+        view.addSubview(optionsCollectionView)
+        view.addSubview(titleLabel)
+        view.addSubview(subtitleLabel)
         
-        Variables.tableType = CellType.planet
-        performInformationRequest()
+        NSLayoutConstraint.activate([
+            
+            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: -5),
+            subtitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            subtitleLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            
+            optionsCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
+            optionsCollectionView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            optionsCollectionView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            optionsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -175),
+            
+            ])
+    }
+    
+    // MARK: UICollectionView Methods
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(mainMenuModels)
+        return mainMenuModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainMenuInformationCell", for: indexPath) as? MainMenuInformationCell else { fatalError("Wrong type") }
+        print("the model is \(mainMenuModels[indexPath.row])")
+        cell.bindCell(model: mainMenuModels[indexPath.row])
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("cell selected, request needs to be performed")
+        print("the model selected is \(mainMenuModels[indexPath.row].title)")
+        switch mainMenuModels[indexPath.row].title {
+        case "Planets":
+            Variables.tableType = .planet
+            performInformationRequest()
+        case "vehicle":
+            Variables.tableType = .vehicle
+            performInformationRequest()
+        case "Species":
+            Variables.tableType = .species
+            performInformationRequest()
+        case "Characters":
+            Variables.tableType = .species
+            performInformationRequest()
+        default:
+            print("Unknown!")
+        }
         
     }
     
-    @objc
-    func handleSpeciesButtonTapped() {
-        speciesButton.isHidden = true
-        speciesIndicator.startAnimating()
-        self.view.isUserInteractionEnabled = false
-        
-        Variables.tableType = CellType.species
-        performInformationRequest()
-    }
-    
-    @objc
-    func handleCharacterButtonTapped() {
-        characterButton.isHidden = true
-        characterIndicator.startAnimating()
-        self.view.isUserInteractionEnabled = false
-    
-        Variables.tableType = CellType.character
-        performInformationRequest()
+    func generateMainMenuModels() {
+        let planetsModel = MainMenuInformationModel(title: "Planets", image: "Ord_Mantell_TOR_new.png")
+        let speciesModel = MainMenuInformationModel(title: "Species", image: "Chewbacca-1.png")
+        let vehiclesModel = MainMenuInformationModel(title: "vehicles", image: "Millennium_Falcon_DICE.png")
+        let charactersModel = MainMenuInformationModel(title: "Characters", image: "the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png")
+        mainMenuModels.append(planetsModel)
+        mainMenuModels.append(speciesModel)
+        mainMenuModels.append(vehiclesModel)
+        mainMenuModels.append(charactersModel)
     }
     
     func performInformationRequest() {
@@ -110,14 +154,6 @@ class MainMenuViewController: UIViewController {
         }
     }
     
-    func showAllButtons() {
-        planetButton.isHidden = false
-        speciesButton.isHidden = false
-        characterButton.isHidden = false
-        vehicleButton.isHidden = false
-    }
-    
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {}
     
 }
-
