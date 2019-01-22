@@ -21,6 +21,7 @@
 		3502010C209E5A1300CA539F /* SingularInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502010B209E5A1300CA539F /* SingularInfoModel.swift */; };
 		3502010E209E79CE00CA539F /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3502010D209E79CE00CA539F /* InformationViewController.swift */; };
 		35020112209E892600CA539F /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35020111209E892600CA539F /* InformationView.swift */; };
+		3525472721F6E0C400046E0C /* UIViewController + ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3525472621F6E0C400046E0C /* UIViewController + ActivityIndicatorView.swift */; };
 		35294DF420996F7E00168295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294DF320996F7E00168295 /* AppDelegate.swift */; };
 		35294DF620996F7E00168295 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294DF520996F7E00168295 /* MainMenuViewController.swift */; };
 		35294DF920996F7E00168295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35294DF720996F7E00168295 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		3502010B209E5A1300CA539F /* SingularInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingularInfoModel.swift; sourceTree = "<group>"; };
 		3502010D209E79CE00CA539F /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		35020111209E892600CA539F /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		3525472621F6E0C400046E0C /* UIViewController + ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		35294DF020996F7E00168295 /* StarWarsInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35294DF320996F7E00168295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35294DF520996F7E00168295 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				350200F1209C217900CA539F /* TableViewController.swift */,
 				3502010D209E79CE00CA539F /* InformationViewController.swift */,
 				35020111209E892600CA539F /* InformationView.swift */,
+				3525472621F6E0C400046E0C /* UIViewController + ActivityIndicatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				35E1FC6B20A7FFC20012CCA0 /* Movie.swift in Sources */,
 				35294DF620996F7E00168295 /* MainMenuViewController.swift in Sources */,
 				350200F2209C217900CA539F /* TableViewController.swift in Sources */,
+				3525472721F6E0C400046E0C /* UIViewController + ActivityIndicatorView.swift in Sources */,
 				350200F8209CC42E00CA539F /* TableViewEntryGenerationClient.swift in Sources */,
 				35020104209E03F300CA539F /* Character.swift in Sources */,
 				3502010C209E5A1300CA539F /* SingularInfoModel.swift in Sources */,

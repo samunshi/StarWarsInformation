@@ -24,8 +24,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "StarWarsinfo"
-        label.font = UIFont.init(name: "Starjedi", size: 25)
-        label.textColor = UIColor.yellow
+        label.font = UIFont.init(name: "Starjedi", size: 35)
+        label.textColor = UIColor.init(red: 1.0, green: 204/255, blue: 102/255, alpha: 1.0)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -34,15 +34,9 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         let label = UILabel()
         label.text = "Welcome! Please select your option:"
         label.font = UIFont.init(name: "Starjedi", size: 14)
-        label.textColor = UIColor.yellow
+        label.textColor = UIColor.init(red: 1.0, green: 204/255, blue: 102/255, alpha: 1.0)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    let activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView()
-        indicator.hidesWhenStopped = true
-        return indicator
     }()
     
     var cellTypeBeingPassed: CellType!
@@ -62,7 +56,6 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         optionsCollectionView.delegate = self
         
         optionsCollectionView.register(MainMenuInformationCell.self, forCellWithReuseIdentifier: "MainMenuInformationCell")
-        
         commonInit()
         
     }
@@ -71,7 +64,10 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         generateMainMenuModels()
     }
     
-    func commonInit() {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)    }
+    
+    func commonInit() {        
         view.addSubview(optionsCollectionView)
         view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
@@ -89,7 +85,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
             optionsCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
             optionsCollectionView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             optionsCollectionView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            optionsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -175),
+            optionsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150),
             
             ])
     }
@@ -148,10 +144,12 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func performInformationRequest() {
+        let sv = UIViewController.displaySpinner(onView: self.view)
         tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) { (dataArray) in
             print("\(Variables.tableType.rawValue) button tapped!")
             print ("MMVC: \(dataArray.count)")
             Variables.dataArray = dataArray
+            UIViewController.removeSpinner(spinner: sv)
             self.performSegue(withIdentifier: "tableViewSegue", sender: nil)
         }
     }

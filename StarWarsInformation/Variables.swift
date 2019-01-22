@@ -50,6 +50,6 @@ struct Variables {
                                                     theForceAwakens: "the-force-awakens.jpg",
                                                     theLastJedi: "the-last-jedi.jpg",
                                                     rogueOne: "rogue-one.jpeg",
-                                                    revengeOfTheSith: "revenge-of-the-sith.jpeg"]
+                                                    revengeOfTheSith: "revenge-of-the-sith.jpg"]
     
 }
