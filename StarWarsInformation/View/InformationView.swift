@@ -51,13 +51,13 @@ public class InformationView {
     public func generateVehiclesText() -> String {
         let vehicle: Vehicle = Variables.vehicle
         let text: String = """
-        Type (if known): \(vehicle.type)
-        Manufacturer: \(vehicle.manufacturer)
-        Cargo Capacity: \(vehicle.cargoCapacity)
-        Crew complement: \(vehicle.crew)
-        Passengers: \(vehicle.passengers)
-        Vehicle Cost: \(vehicle.cost)
-        Vehicle Length: \(vehicle.length) m
+            Type (if known): \(vehicle.type)
+            Manufacturer: \(vehicle.manufacturer)
+            Cargo Capacity: \(vehicle.cargoCapacity)
+            Crew complement: \(vehicle.crew)
+            Passengers: \(vehicle.passengers)
+            Vehicle Cost: \(vehicle.cost)
+            Vehicle Length: \(vehicle.length) m
         """
         return text
     }

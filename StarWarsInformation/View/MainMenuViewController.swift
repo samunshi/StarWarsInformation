@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MainMenuViewController: UIViewController {
     // MARK: Properties
     let optionsCollectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = .init()
@@ -90,48 +90,6 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
             ])
     }
     
-    // MARK: UICollectionView Methods
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(mainMenuModels)
-        return mainMenuModels.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainMenuInformationCell", for: indexPath) as? MainMenuInformationCell else { fatalError("Wrong type") }
-        print("the model is \(mainMenuModels[indexPath.row])")
-        cell.bindCell(model: mainMenuModels[indexPath.row])
-        cell.layer.cornerRadius = 10
-        cell.layer.masksToBounds = true
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 100)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cell selected, request needs to be performed")
-        print("the model selected is \(mainMenuModels[indexPath.row].title)")
-        switch mainMenuModels[indexPath.row].title {
-        case CellType.planet.rawValue:
-            Variables.tableType = .planet
-            performInformationRequest()
-        case CellType.vehicle.rawValue.lowercased(): // bug in font causes this
-            Variables.tableType = .vehicle
-            performInformationRequest()
-        case CellType.species.rawValue:
-            Variables.tableType = .species
-            performInformationRequest()
-        case CellType.character.rawValue:
-            Variables.tableType = .character
-            performInformationRequest()
-        default:
-            print("Unknown!")
-        }
-        
-    }
-    
     func generateMainMenuModels() {
         let planetsModel = MainMenuInformationModel(title: "Planets", image: "planet")
         let speciesModel = MainMenuInformationModel(title: "Species", image: "chewbacca")
@@ -155,5 +113,53 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {}
+    
+}
+
+extension MainMenuViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainMenuInformationCell", for: indexPath) as? MainMenuInformationCell else { fatalError("Wrong type") }
+        print("the model is \(mainMenuModels[indexPath.row])")
+        cell.bindCell(model: mainMenuModels[indexPath.row])
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("cell selected, request needs to be performed")
+        print("the model selected is \(mainMenuModels[indexPath.row].title)")
+        switch mainMenuModels[indexPath.row].title {
+        case CellType.planet.rawValue:
+            Variables.tableType = .planet
+            performInformationRequest()
+        case CellType.vehicle.rawValue.lowercased(): // bug in font causes this
+            Variables.tableType = .vehicle
+            performInformationRequest()
+        case CellType.species.rawValue:
+            Variables.tableType = .species
+            performInformationRequest()
+        case CellType.character.rawValue:
+            Variables.tableType = .character
+            performInformationRequest()
+        default:
+            print("Unknown!")
+        }
+        
+    }
+}
+
+extension MainMenuViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(mainMenuModels)
+        return mainMenuModels.count
+    }
+}
+
+extension MainMenuViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 100)
+    }
     
 }
