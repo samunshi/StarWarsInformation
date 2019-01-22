@@ -104,6 +104,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainMenuInformationCell", for: indexPath) as? MainMenuInformationCell else { fatalError("Wrong type") }
         print("the model is \(mainMenuModels[indexPath.row])")
         cell.bindCell(model: mainMenuModels[indexPath.row])
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
         
         return cell
     }
@@ -116,17 +118,17 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         print("cell selected, request needs to be performed")
         print("the model selected is \(mainMenuModels[indexPath.row].title)")
         switch mainMenuModels[indexPath.row].title {
-        case "Planets":
+        case CellType.planet.rawValue:
             Variables.tableType = .planet
             performInformationRequest()
-        case "vehicle":
+        case CellType.vehicle.rawValue.lowercased(): // bug in font causes this
             Variables.tableType = .vehicle
             performInformationRequest()
-        case "Species":
+        case CellType.species.rawValue:
             Variables.tableType = .species
             performInformationRequest()
-        case "Characters":
-            Variables.tableType = .species
+        case CellType.character.rawValue:
+            Variables.tableType = .character
             performInformationRequest()
         default:
             print("Unknown!")
@@ -135,10 +137,10 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func generateMainMenuModels() {
-        let planetsModel = MainMenuInformationModel(title: "Planets", image: "Ord_Mantell_TOR_new.png")
-        let speciesModel = MainMenuInformationModel(title: "Species", image: "Chewbacca-1.png")
-        let vehiclesModel = MainMenuInformationModel(title: "vehicles", image: "Millennium_Falcon_DICE.png")
-        let charactersModel = MainMenuInformationModel(title: "Characters", image: "the_last_jedi_luke_skywalker_1___png_by_captain_kingsman16-dbu4m8j.png")
+        let planetsModel = MainMenuInformationModel(title: "Planets", image: "planet")
+        let speciesModel = MainMenuInformationModel(title: "Species", image: "chewbacca")
+        let vehiclesModel = MainMenuInformationModel(title: "vehicles", image: "falcon")
+        let charactersModel = MainMenuInformationModel(title: "Characters", image: "darth_vader")
         mainMenuModels.append(planetsModel)
         mainMenuModels.append(speciesModel)
         mainMenuModels.append(vehiclesModel)

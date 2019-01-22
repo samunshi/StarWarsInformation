@@ -18,20 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launch_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1TY-IN-0nj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="launch_background" translatesAutoresizingMaskIntoConstraints="NO" id="Khk-Nc-U86" userLabel="background_image">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
+                                <viewLayoutGuide key="safeArea" id="GlU-t4-Vrn"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-ez-GQb">
-                                <rect key="frame" x="134" y="361" width="107" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="Star_Wars_logo" translatesAutoresizingMaskIntoConstraints="NO" id="QEh-N2-gWC" userLabel="logo_image_view">
+                                <rect key="frame" x="30" y="170" width="315" height="147"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star_Wars_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="iiG-fB-lTF">
-                                <rect key="frame" x="48" y="196" width="278" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_icon" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-w5-4RT" userLabel="info_icon">
+                                <rect key="frame" x="120" y="370" width="135" height="132"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QEh-N2-gWC" firstAttribute="bottom" secondItem="Khk-Nc-U86" secondAttribute="bottom" constant="-360" id="3hM-iG-f20"/>
+                            <constraint firstItem="QEh-N2-gWC" firstAttribute="trailing" secondItem="Khk-Nc-U86" secondAttribute="trailing" constant="-30" id="4de-Tr-9Dc"/>
+                            <constraint firstItem="MVU-w5-4RT" firstAttribute="trailing" secondItem="Khk-Nc-U86" secondAttribute="trailing" constant="-120" id="AMU-oN-FOV"/>
+                            <constraint firstItem="Khk-Nc-U86" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AqQ-3N-ziH"/>
+                            <constraint firstItem="MVU-w5-4RT" firstAttribute="leading" secondItem="Khk-Nc-U86" secondAttribute="leading" constant="120" id="BlY-x1-bnm"/>
+                            <constraint firstItem="Khk-Nc-U86" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Jgj-Fm-jay"/>
+                            <constraint firstItem="QEh-N2-gWC" firstAttribute="top" secondItem="Khk-Nc-U86" secondAttribute="top" constant="170" id="QvX-cy-ooX"/>
+                            <constraint firstItem="QEh-N2-gWC" firstAttribute="leading" secondItem="Khk-Nc-U86" secondAttribute="leading" constant="30" id="bi7-Gw-AK8"/>
+                            <constraint firstItem="Khk-Nc-U86" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" constant="10" id="fw6-yW-m41"/>
+                            <constraint firstItem="MVU-w5-4RT" firstAttribute="top" secondItem="QEh-N2-gWC" secondAttribute="top" constant="200" id="nBN-4q-qn5"/>
+                            <constraint firstItem="MVU-w5-4RT" firstAttribute="bottom" secondItem="Khk-Nc-U86" secondAttribute="bottom" constant="-175" id="oal-Pg-P7p"/>
+                            <constraint firstItem="Khk-Nc-U86" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-5" id="tGP-wh-t4m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -41,8 +53,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Star_Wars_logo.png" width="1837" height="789"/>
-        <image name="info_icon.png" width="512" height="512"/>
-        <image name="launch_background.jpg" width="236" height="466"/>
+        <image name="Star_Wars_logo" width="1837" height="789"/>
+        <image name="info_icon" width="512" height="512"/>
+        <image name="launch_background" width="236" height="466"/>
     </resources>
 </document>

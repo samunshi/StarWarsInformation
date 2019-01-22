@@ -10,11 +10,10 @@ import Foundation
 import UIKit
 
 class MainMenuInformationCell: UICollectionViewCell {
-    
     // MARK: Properties
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.init(name: "Starjedi", size: 14)
+        label.font = UIFont.init(name: "Starjedi", size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -37,19 +36,19 @@ class MainMenuInformationCell: UICollectionViewCell {
     }
     
     func commonInit() {
-        backgroundColor = UIColor.white // this is temp to see the cells
+        backgroundColor = UIColor.init(red: 1.0, green: 204/255, blue: 102/255, alpha: 1.0)
         
-        addSubview(titleLabel)
-        addSubview(imageView)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(imageView)
         
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
-            imageView.widthAnchor.constraint(equalToConstant: 100),
+            imageView.heightAnchor.constraint(equalToConstant: 75),
+            imageView.widthAnchor.constraint(equalToConstant: 75),
+            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: -8),
-            //titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 8),
             
             ])
