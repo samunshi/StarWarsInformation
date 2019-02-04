@@ -103,10 +103,16 @@ class MainMenuViewController: UIViewController {
     
     func performInformationRequest() {
         let sv = UIViewController.displaySpinner(onView: self.view)
-        tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) { (dataArray) in
-            print("\(Variables.tableType.rawValue) button tapped!")
-            print ("MMVC: \(dataArray.count)")
-            Variables.dataArray = dataArray
+        if (cellTypeBeingPassed != Variables.tableType) {
+            Variables.tableType = cellTypeBeingPassed
+            tableViewEntryGenerationClient.generateTableViewEntries(type: Variables.tableType) { (dataArray) in
+                print("\(Variables.tableType.rawValue) button tapped!")
+                print ("MMVC: \(dataArray.count)")
+                Variables.dataArray = dataArray
+                UIViewController.removeSpinner(spinner: sv)
+                self.performSegue(withIdentifier: "tableViewSegue", sender: nil)
+            }
+        } else {
             UIViewController.removeSpinner(spinner: sv)
             self.performSegue(withIdentifier: "tableViewSegue", sender: nil)
         }
@@ -132,16 +138,16 @@ extension MainMenuViewController: UICollectionViewDelegate {
         print("the model selected is \(mainMenuModels[indexPath.row].title)")
         switch mainMenuModels[indexPath.row].title {
         case CellType.planet.rawValue:
-            Variables.tableType = .planet
+            cellTypeBeingPassed = .planet
             performInformationRequest()
         case CellType.vehicle.rawValue.lowercased(): // bug in font causes this
-            Variables.tableType = .vehicle
+            cellTypeBeingPassed = .vehicle
             performInformationRequest()
         case CellType.species.rawValue:
-            Variables.tableType = .species
+            cellTypeBeingPassed = .species
             performInformationRequest()
         case CellType.character.rawValue:
-            Variables.tableType = .character
+            cellTypeBeingPassed = .character
             performInformationRequest()
         default:
             print("Unknown!")
