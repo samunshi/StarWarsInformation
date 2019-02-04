@@ -517,13 +517,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7WTUYKQ3T8;
+				DEVELOPMENT_TEAM = UPAPS25J2R;
 				INFOPLIST_FILE = StarWarsInformation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = personal.StarWarsInformation;
+				PRODUCT_BUNDLE_IDENTIFIER = satwik.munshi.starwarsinfo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -536,13 +536,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7WTUYKQ3T8;
+				DEVELOPMENT_TEAM = UPAPS25J2R;
 				INFOPLIST_FILE = StarWarsInformation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = personal.StarWarsInformation;
+				PRODUCT_BUNDLE_IDENTIFIER = satwik.munshi.starwarsinfo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
